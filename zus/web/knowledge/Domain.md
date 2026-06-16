@@ -3,4 +3,16 @@
 > Domain facts, entities, glossary, and ground truth — the stable "what is true here"
 > reference. Walled to this domain.
 
-_(empty — skeleton; populated in the ground-truth recon pass)_
+The ZUS clan-intelligence platform (game: **Total Battle**). Multi-clan-capable, launched for ZUS
+(`clanSlug = zus`).
+
+- **Player** — a clan member: might, hero level, vip, `titles` (binary string from `intel`), aliases,
+  coords, `lastSeen`. Keyed by stable `gamePlayerId`.
+- **Score** — per-player-per-event percentage, `isCurrent` flag, dates; drives event leaderboards.
+- **Event (mission)** — config: name, weight, active, allowUploads, isAggregate, componentEvents,
+  Discord thread mapping.
+- **Analytics** — clan might/hero snapshots; participation (event coverage %, "made" / "below"); **AWOL**
+  detection (accounted-for = `isCurrent` + rawScore > 0).
+- **Recruitment** — public intake form → Recruits doc → Discord notify → admin review/finalize.
+- **advancedcalc** — battle-strength engine ("magic-ratio"; effective squad strength; attack-order).
+- **Roles** — site role (platform-wide) vs clan role (per `accounts[]` entry). See Decisions.
