@@ -7,7 +7,7 @@
 - _(none set — skeleton)_
 
 ## Next actions
-- [ ] Populate `knowledge/` in the deferred ground-truth recon pass (mad-custom-tx repo).
+- [x] Populate `knowledge/` from the ground-truth recon pass (mad-custom-tx repo). _(done 2026-06-16)_
 
 ## Blocked
 - _(none)_
