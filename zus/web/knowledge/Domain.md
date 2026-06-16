@@ -1,4 +1,4 @@
-# Domain — zus
+# Domain — zus / web
 
 > Domain facts, entities, glossary, and ground truth — the stable "what is true here"
 > reference. Walled to this domain.
