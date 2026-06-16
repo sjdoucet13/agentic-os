@@ -1,0 +1,21 @@
+# ---------------------------------------------------------------------------
+# _graphs/ — GENERATED Graphify output. Regenerable at any time via
+# `graphify update`, so it is NOT versioned (generated vs. authored is physical).
+# Keep the folder structure + docs tracked; ignore everything Graphify generates.
+# ---------------------------------------------------------------------------
+/_graphs/**
+!/_graphs/README.md
+!/_graphs/mad-custom-tx/
+!/_graphs/mad-custom-tx/.gitkeep
+!/_graphs/zus-legacy/
+!/_graphs/zus-legacy/.gitkeep
+
+# Obsidian per-machine UI state (not vault content)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*~

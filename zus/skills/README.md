@@ -1,0 +1,6 @@
+# zus — domain skills
+
+Domain-specific, reusable tasks for **zus**. Reusable *cross-domain* tasks live in
+`_ops/skills/` instead. Skills here reference only this domain's knowledge.
+
+_(empty — skeleton)_

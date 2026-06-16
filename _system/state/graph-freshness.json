@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "_description": "MACHINE-WRITTEN ONLY. Do not hand-edit. Tracks Graphify freshness per repo. Written by _ops/skills/graph-refresh, read by the dashboard. nulls = not yet run.",
+  "_fields": {
+    "graph_path": "vault-relative path to the read-only Graphify output for this repo",
+    "serves_domains": "which domain(s)/sub-area(s) reference this graph",
+    "last_graphify_run": "ISO-8601 UTC timestamp of the last `graphify update`, or null",
+    "repo_latest_commit": "40-char git SHA of repo HEAD at last check, or null",
+    "stale": "bool — true if repo_latest_commit advanced past the commit the graph was built from; null = unknown"
+  },
+  "generated_at": null,
+  "repos": {
+    "mad-custom-tx": {
+      "graph_path": "_graphs/mad-custom-tx/",
+      "serves_domains": ["mad/customs", "mad/armory"],
+      "last_graphify_run": null,
+      "repo_latest_commit": null,
+      "stale": null
+    },
+    "zus-legacy": {
+      "graph_path": "_graphs/zus-legacy/",
+      "serves_domains": ["zus"],
+      "last_graphify_run": null,
+      "repo_latest_commit": null,
+      "stale": null
+    }
+  }
+}
