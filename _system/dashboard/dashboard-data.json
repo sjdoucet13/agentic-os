@@ -1,0 +1,512 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-06-16T22:24:34",
+  "vaultPath": "/mnt/c/Users/sdouc/projects/agentic-os",
+  "obsidianVaultPath": "\\\\wsl.localhost\\Ubuntu\\home\\sdoucet\\projects\\agentic-os",
+  "freshnessThresholds": {
+    "greenDays": 3,
+    "amberDays": 10,
+    "rhythmDays": 14
+  },
+  "phase": 1,
+  "domains": [
+    {
+      "domain": "_ops",
+      "kind": "meta",
+      "title": "ops \u2014 Router (Skills + Automations)",
+      "router": "_ops/CLAUDE.md",
+      "health": "healthy",
+      "healthStatus": "green",
+      "mostUrgent": {
+        "subArea": null,
+        "next": null,
+        "freshness": "green",
+        "reason": "most recent"
+      },
+      "subAreaTally": [
+        {
+          "subArea": "(flat)",
+          "status": "green"
+        }
+      ],
+      "lastUpdated": "2026-06-16T13:34:16",
+      "freshness": "green",
+      "rhythm": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5
+      ],
+      "graph": null,
+      "subAreas": [
+        {
+          "subArea": null,
+          "state": null,
+          "next": null,
+          "blocked": false,
+          "blockedText": null,
+          "parked": false,
+          "lastUpdated": "2026-06-16T13:34:16",
+          "ageDays": 0.4,
+          "freshness": "green",
+          "knowledgeFiles": 0,
+          "knowledgePopulated": 0,
+          "hasNow": false,
+          "hasSkills": true,
+          "paths": {
+            "dir": "_ops",
+            "now": null,
+            "knowledge": null
+          }
+        }
+      ]
+    },
+    {
+      "domain": "fugro",
+      "kind": "knowledge",
+      "title": "fugro \u2014 Domain Router",
+      "router": "fugro/CLAUDE.md",
+      "health": "healthy",
+      "healthStatus": "green",
+      "mostUrgent": {
+        "subArea": null,
+        "next": null,
+        "freshness": "green",
+        "reason": "most recent"
+      },
+      "subAreaTally": [
+        {
+          "subArea": "(flat)",
+          "status": "green"
+        }
+      ],
+      "lastUpdated": "2026-06-16T19:03:38",
+      "freshness": "green",
+      "rhythm": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        8
+      ],
+      "graph": {
+        "name": "PM_Auto",
+        "html": "_graphs/PM_Auto/graphify-out/graph.html",
+        "exists": true
+      },
+      "subAreas": [
+        {
+          "subArea": null,
+          "state": null,
+          "next": null,
+          "blocked": false,
+          "blockedText": null,
+          "parked": false,
+          "lastUpdated": "2026-06-16T19:03:38",
+          "ageDays": 0.1,
+          "freshness": "green",
+          "knowledgeFiles": 5,
+          "knowledgePopulated": 5,
+          "hasNow": true,
+          "hasSkills": true,
+          "paths": {
+            "dir": "fugro",
+            "now": "fugro/now.md",
+            "knowledge": "fugro/knowledge"
+          }
+        }
+      ]
+    },
+    {
+      "domain": "mad",
+      "kind": "knowledge",
+      "title": "mad \u2014 Domain Router (ONE domain, two sub-areas)",
+      "router": "mad/CLAUDE.md",
+      "health": "healthy",
+      "healthStatus": "green",
+      "mostUrgent": {
+        "subArea": "_shared",
+        "next": null,
+        "freshness": "green",
+        "reason": "most recent"
+      },
+      "subAreaTally": [
+        {
+          "subArea": "_shared",
+          "status": "green"
+        },
+        {
+          "subArea": "armory",
+          "status": "green"
+        },
+        {
+          "subArea": "customs",
+          "status": "green"
+        }
+      ],
+      "lastUpdated": "2026-06-16T19:10:53",
+      "freshness": "green",
+      "rhythm": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20
+      ],
+      "graph": {
+        "name": "mad-custom-tx",
+        "html": "_graphs/mad-custom-tx/graphify-out/graph.html",
+        "exists": true
+      },
+      "subAreas": [
+        {
+          "subArea": "_shared",
+          "state": null,
+          "next": null,
+          "blocked": false,
+          "blockedText": null,
+          "parked": false,
+          "lastUpdated": "2026-06-16T19:08:28",
+          "ageDays": 0.1,
+          "freshness": "green",
+          "knowledgeFiles": 5,
+          "knowledgePopulated": 5,
+          "hasNow": false,
+          "hasSkills": false,
+          "paths": {
+            "dir": "mad/_shared",
+            "now": null,
+            "knowledge": "mad/_shared/knowledge"
+          }
+        },
+        {
+          "subArea": "armory",
+          "state": null,
+          "next": null,
+          "blocked": false,
+          "blockedText": null,
+          "parked": false,
+          "lastUpdated": "2026-06-16T19:10:53",
+          "ageDays": 0.1,
+          "freshness": "green",
+          "knowledgeFiles": 5,
+          "knowledgePopulated": 5,
+          "hasNow": true,
+          "hasSkills": true,
+          "paths": {
+            "dir": "mad/armory",
+            "now": "mad/armory/now.md",
+            "knowledge": "mad/armory/knowledge"
+          }
+        },
+        {
+          "subArea": "customs",
+          "state": null,
+          "next": null,
+          "blocked": false,
+          "blockedText": null,
+          "parked": false,
+          "lastUpdated": "2026-06-16T19:09:42",
+          "ageDays": 0.1,
+          "freshness": "green",
+          "knowledgeFiles": 5,
+          "knowledgePopulated": 5,
+          "hasNow": true,
+          "hasSkills": true,
+          "paths": {
+            "dir": "mad/customs",
+            "now": "mad/customs/now.md",
+            "knowledge": "mad/customs/knowledge"
+          }
+        }
+      ]
+    },
+    {
+      "domain": "personal",
+      "kind": "knowledge",
+      "title": "personal \u2014 Domain Router (KNOWLEDGE-ONLY)",
+      "router": "personal/CLAUDE.md",
+      "health": "healthy",
+      "healthStatus": "green",
+      "mostUrgent": {
+        "subArea": null,
+        "next": null,
+        "freshness": "green",
+        "reason": "most recent"
+      },
+      "subAreaTally": [
+        {
+          "subArea": "(flat)",
+          "status": "green"
+        }
+      ],
+      "lastUpdated": "2026-06-16T13:35:56",
+      "freshness": "green",
+      "rhythm": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      "graph": null,
+      "subAreas": [
+        {
+          "subArea": null,
+          "state": null,
+          "next": null,
+          "blocked": false,
+          "blockedText": null,
+          "parked": false,
+          "lastUpdated": "2026-06-16T13:35:56",
+          "ageDays": 0.4,
+          "freshness": "green",
+          "knowledgeFiles": 5,
+          "knowledgePopulated": 0,
+          "hasNow": false,
+          "hasSkills": false,
+          "paths": {
+            "dir": "personal",
+            "now": null,
+            "knowledge": "personal/knowledge"
+          }
+        }
+      ]
+    },
+    {
+      "domain": "zus",
+      "kind": "knowledge",
+      "title": "zus \u2014 Domain Router (ONE domain, FOUR sub-areas)",
+      "router": "zus/CLAUDE.md",
+      "health": "healthy",
+      "healthStatus": "green",
+      "mostUrgent": {
+        "subArea": "_shared",
+        "next": null,
+        "freshness": "green",
+        "reason": "most recent"
+      },
+      "subAreaTally": [
+        {
+          "subArea": "_shared",
+          "status": "green"
+        },
+        {
+          "subArea": "app",
+          "status": "green"
+        },
+        {
+          "subArea": "intel",
+          "status": "green"
+        },
+        {
+          "subArea": "web",
+          "status": "green"
+        }
+      ],
+      "lastUpdated": "2026-06-16T19:18:57",
+      "freshness": "green",
+      "rhythm": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        26
+      ],
+      "graph": {
+        "name": "zus-legacy",
+        "html": "_graphs/zus-legacy/graphify-out/graph.html",
+        "exists": true
+      },
+      "subAreas": [
+        {
+          "subArea": "_shared",
+          "state": null,
+          "next": null,
+          "blocked": false,
+          "blockedText": null,
+          "parked": false,
+          "lastUpdated": "2026-06-16T19:18:57",
+          "ageDays": 0.1,
+          "freshness": "green",
+          "knowledgeFiles": 5,
+          "knowledgePopulated": 5,
+          "hasNow": false,
+          "hasSkills": false,
+          "paths": {
+            "dir": "zus/_shared",
+            "now": null,
+            "knowledge": "zus/_shared/knowledge"
+          }
+        },
+        {
+          "subArea": "app",
+          "state": null,
+          "next": null,
+          "blocked": false,
+          "blockedText": null,
+          "parked": false,
+          "lastUpdated": "2026-06-16T19:18:29",
+          "ageDays": 0.1,
+          "freshness": "green",
+          "knowledgeFiles": 5,
+          "knowledgePopulated": 5,
+          "hasNow": true,
+          "hasSkills": true,
+          "paths": {
+            "dir": "zus/app",
+            "now": "zus/app/now.md",
+            "knowledge": "zus/app/knowledge"
+          }
+        },
+        {
+          "subArea": "intel",
+          "state": null,
+          "next": "(watch) decoderubens2.py:188 writes tag not clanId \u2014 use decoderoster.py for roster TSVs.",
+          "blocked": false,
+          "blockedText": null,
+          "parked": false,
+          "lastUpdated": "2026-06-16T19:16:34",
+          "ageDays": 0.1,
+          "freshness": "green",
+          "knowledgeFiles": 5,
+          "knowledgePopulated": 5,
+          "hasNow": true,
+          "hasSkills": false,
+          "paths": {
+            "dir": "zus/intel",
+            "now": "zus/intel/now.md",
+            "knowledge": "zus/intel/knowledge"
+          }
+        },
+        {
+          "subArea": "web",
+          "state": null,
+          "next": null,
+          "blocked": false,
+          "blockedText": null,
+          "parked": false,
+          "lastUpdated": "2026-06-16T19:17:26",
+          "ageDays": 0.1,
+          "freshness": "green",
+          "knowledgeFiles": 5,
+          "knowledgePopulated": 5,
+          "hasNow": true,
+          "hasSkills": true,
+          "paths": {
+            "dir": "zus/web",
+            "now": "zus/web/now.md",
+            "knowledge": "zus/web/knowledge"
+          }
+        }
+      ]
+    },
+    {
+      "domain": "_system",
+      "kind": "meta",
+      "title": "_system",
+      "router": null,
+      "health": "healthy",
+      "healthStatus": "green",
+      "mostUrgent": {
+        "subArea": null,
+        "next": null,
+        "freshness": "green",
+        "reason": "most recent"
+      },
+      "subAreaTally": [
+        {
+          "subArea": "(flat)",
+          "status": "green"
+        }
+      ],
+      "lastUpdated": "2026-06-16T22:22:45",
+      "freshness": "green",
+      "rhythm": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5
+      ],
+      "graph": null,
+      "subAreas": [
+        {
+          "subArea": null,
+          "state": null,
+          "next": null,
+          "blocked": false,
+          "blockedText": null,
+          "parked": false,
+          "lastUpdated": "2026-06-16T22:22:45",
+          "ageDays": 0.0,
+          "freshness": "green",
+          "knowledgeFiles": 0,
+          "knowledgePopulated": 0,
+          "hasNow": false,
+          "hasSkills": false,
+          "paths": {
+            "dir": "_system",
+            "now": null,
+            "knowledge": null
+          }
+        }
+      ]
+    }
+  ]
+}

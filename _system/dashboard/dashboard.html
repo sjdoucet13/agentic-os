@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>agentic-os · dev dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#0e1116; --steel2:#151a21; --panel:#1b212b;
+    --line:#2b3441; --line2:#3a4756;
+    --txt:#cdd6e2; --muted:#7d8a9c; --dim:#566374;
+    --accent:#39FF14; --accent-dim:#2bbf10;
+    --green:#39FF14; --amber:#f0b400; --red:#ff4d4d;
+    --display:'Bebas Neue',Impact,'Arial Narrow',sans-serif;
+    --body:'Inter',system-ui,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:linear-gradient(180deg,#0b0e12,#0e1116 220px);color:var(--txt);
+       font-family:var(--body);font-size:14px;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:22px 20px 60px}
+  header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;
+         border-bottom:1px solid var(--line);padding-bottom:14px}
+  .brand{font-family:var(--display);font-size:40px;letter-spacing:2px;line-height:.9}
+  .brand b{color:var(--accent)}
+  .brand small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.5px;color:var(--muted);margin-top:6px}
+  .meta-r{text-align:right;font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .meta-r code{color:var(--accent-dim)}
+  .cmd{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0 22px}
+  .cmd .lbl{font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin-right:4px}
+  .btn{font-family:var(--display);letter-spacing:1.5px;font-size:15px;padding:7px 14px;border-radius:4px;
+       border:1px solid var(--line2);background:var(--panel);color:var(--muted);position:relative;cursor:not-allowed;opacity:.62}
+  .btn .ph{display:block;font-family:var(--mono);font-size:8px;letter-spacing:1px;color:var(--dim);margin-top:1px}
+  .lvltag{font-family:var(--mono);font-size:10px;color:var(--dim);letter-spacing:1px;text-transform:uppercase;margin:0 0 12px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+  .card{background:linear-gradient(180deg,var(--panel),var(--steel2));border:1px solid var(--line);
+        border-radius:8px;padding:15px 16px;transition:border-color .15s,transform .05s}
+  .card.click{cursor:pointer}
+  .card.click:hover{border-color:var(--accent-dim);transform:translateY(-1px)}
+  .card.meta{opacity:.86}
+  .c-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .dname{font-family:var(--display);font-size:30px;letter-spacing:1.5px;line-height:.95}
+  .dtag{font-family:var(--mono);font-size:10px;color:var(--muted);margin-top:3px}
+  .health{font-family:var(--mono);font-size:10px;letter-spacing:1px;text-transform:uppercase;
+          padding:3px 8px;border-radius:20px;border:1px solid var(--line2);white-space:nowrap}
+  .health.healthy{color:var(--green);border-color:#1d5a16}
+  .health.attention{color:var(--amber);border-color:#5a4a16}
+  .health.critical{color:var(--red);border-color:#5a1d1d}
+  .tally{display:flex;gap:6px;flex-wrap:wrap;margin:13px 0 10px}
+  .pill{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;color:var(--muted);
+        background:var(--steel);border:1px solid var(--line);border-radius:5px;padding:3px 7px}
+  .dot{width:8px;height:8px;border-radius:50%;flex:none}
+  .dot.green{background:var(--green);box-shadow:0 0 5px var(--green)}
+  .dot.amber{background:var(--amber);box-shadow:0 0 5px var(--amber)}
+  .dot.red{background:var(--red);box-shadow:0 0 5px var(--red)}
+  .urgent{font-size:12.5px;color:var(--txt);background:var(--steel);border-left:2px solid var(--accent-dim);
+          padding:7px 10px;border-radius:0 5px 5px 0;margin:6px 0 10px}
+  .urgent .k{font-family:var(--mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:2px}
+  .urgent .none{color:var(--muted)}
+  .c-bot{display:flex;align-items:center;justify-content:space-between;margin-top:10px;gap:10px}
+  .spark{display:flex;align-items:flex-end;gap:2px;height:22px}
+  .spark i{width:5px;background:var(--line2);border-radius:1px;display:block;min-height:2px}
+  .spark i.hot{background:var(--accent-dim)}
+  .glink{font-family:var(--mono);font-size:10px;color:var(--accent-dim);border:1px solid var(--line2);
+         border-radius:4px;padding:3px 8px;cursor:pointer}
+  .glink.off{color:var(--dim);cursor:default;border-style:dashed}
+  #detail{display:none}
+  .back{font-family:var(--mono);font-size:11px;color:var(--accent-dim);cursor:pointer;display:inline-flex;gap:6px;align-items:center;margin-bottom:14px}
+  .d2head{display:flex;align-items:baseline;gap:14px;margin-bottom:4px;flex-wrap:wrap}
+  .d2head .dname{font-size:44px}
+  .sa{background:linear-gradient(180deg,var(--panel),var(--steel2));border:1px solid var(--line);border-radius:8px;padding:14px 15px}
+  .sa h4{margin:0 0 2px;font-family:var(--display);font-size:21px;letter-spacing:1px;display:flex;align-items:center;gap:8px}
+  .sa .age{font-family:var(--mono);font-size:10px;color:var(--muted);margin-bottom:10px}
+  .row{margin:7px 0;font-size:13px}
+  .row .k{font-family:var(--mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--dim);display:block}
+  .row .v{color:var(--txt)} .row .v.empty{color:var(--dim)}
+  .flags{display:flex;gap:6px;margin-top:9px;flex-wrap:wrap}
+  .flag{font-family:var(--mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:4px;border:1px solid}
+  .flag.blocked{color:var(--red);border-color:#5a1d1d}
+  .flag.parked{color:var(--amber);border-color:#5a4a16}
+  .flag.kn{color:var(--muted);border-color:var(--line2)}
+  .flag.sk{color:var(--accent-dim);border-color:#1d5a16}
+  footer{margin-top:34px;border-top:1px solid var(--line);padding-top:12px;
+         font-family:var(--mono);font-size:10.5px;color:var(--dim);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  footer code{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">AGENTIC&middot;OS <b>DASHBOARD</b><small id="genline"></small></div>
+    <div class="meta-r" id="metar"></div>
+  </header>
+
+  <div class="cmd">
+    <span class="lbl">command&nbsp;panel</span>
+    <span class="btn">REGENERATE<span class="ph">trigger · phase 3</span></span>
+    <span class="btn">CAPTURE<span class="ph">trigger · phase 3</span></span>
+    <span class="btn">REPORT<span class="ph">trigger · phase 3</span></span>
+    <span class="btn">RECONCILE<span class="ph">trigger · phase 3</span></span>
+    <span class="btn">FOCUS<span class="ph">trigger · phase 3</span></span>
+  </div>
+
+  <section id="overview">
+    <div class="lvltag">level 1 · overview — click a domain to drill in</div>
+    <div class="grid" id="ovgrid"></div>
+  </section>
+
+  <section id="detail">
+    <div class="back" onclick="showOverview()">&larr; all domains</div>
+    <div id="detailbody"></div>
+  </section>
+
+  <footer id="foot"></footer>
+</div>
+
+<script>
+const DATA = {"schemaVersion": 1, "generatedAt": "2026-06-16T22:24:34", "vaultPath": "/mnt/c/Users/sdouc/projects/agentic-os", "obsidianVaultPath": "\\\\wsl.localhost\\Ubuntu\\home\\sdoucet\\projects\\agentic-os", "freshnessThresholds": {"greenDays": 3, "amberDays": 10, "rhythmDays": 14}, "phase": 1, "domains": [{"domain": "_ops", "kind": "meta", "title": "ops \u2014 Router (Skills + Automations)", "router": "_ops/CLAUDE.md", "health": "healthy", "healthStatus": "green", "mostUrgent": {"subArea": null, "next": null, "freshness": "green", "reason": "most recent"}, "subAreaTally": [{"subArea": "(flat)", "status": "green"}], "lastUpdated": "2026-06-16T13:34:16", "freshness": "green", "rhythm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5], "graph": null, "subAreas": [{"subArea": null, "state": null, "next": null, "blocked": false, "blockedText": null, "parked": false, "lastUpdated": "2026-06-16T13:34:16", "ageDays": 0.4, "freshness": "green", "knowledgeFiles": 0, "knowledgePopulated": 0, "hasNow": false, "hasSkills": true, "paths": {"dir": "_ops", "now": null, "knowledge": null}}]}, {"domain": "fugro", "kind": "knowledge", "title": "fugro \u2014 Domain Router", "router": "fugro/CLAUDE.md", "health": "healthy", "healthStatus": "green", "mostUrgent": {"subArea": null, "next": null, "freshness": "green", "reason": "most recent"}, "subAreaTally": [{"subArea": "(flat)", "status": "green"}], "lastUpdated": "2026-06-16T19:03:38", "freshness": "green", "rhythm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8], "graph": {"name": "PM_Auto", "html": "_graphs/PM_Auto/graphify-out/graph.html", "exists": true}, "subAreas": [{"subArea": null, "state": null, "next": null, "blocked": false, "blockedText": null, "parked": false, "lastUpdated": "2026-06-16T19:03:38", "ageDays": 0.1, "freshness": "green", "knowledgeFiles": 5, "knowledgePopulated": 5, "hasNow": true, "hasSkills": true, "paths": {"dir": "fugro", "now": "fugro/now.md", "knowledge": "fugro/knowledge"}}]}, {"domain": "mad", "kind": "knowledge", "title": "mad \u2014 Domain Router (ONE domain, two sub-areas)", "router": "mad/CLAUDE.md", "health": "healthy", "healthStatus": "green", "mostUrgent": {"subArea": "_shared", "next": null, "freshness": "green", "reason": "most recent"}, "subAreaTally": [{"subArea": "_shared", "status": "green"}, {"subArea": "armory", "status": "green"}, {"subArea": "customs", "status": "green"}], "lastUpdated": "2026-06-16T19:10:53", "freshness": "green", "rhythm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20], "graph": {"name": "mad-custom-tx", "html": "_graphs/mad-custom-tx/graphify-out/graph.html", "exists": true}, "subAreas": [{"subArea": "_shared", "state": null, "next": null, "blocked": false, "blockedText": null, "parked": false, "lastUpdated": "2026-06-16T19:08:28", "ageDays": 0.1, "freshness": "green", "knowledgeFiles": 5, "knowledgePopulated": 5, "hasNow": false, "hasSkills": false, "paths": {"dir": "mad/_shared", "now": null, "knowledge": "mad/_shared/knowledge"}}, {"subArea": "armory", "state": null, "next": null, "blocked": false, "blockedText": null, "parked": false, "lastUpdated": "2026-06-16T19:10:53", "ageDays": 0.1, "freshness": "green", "knowledgeFiles": 5, "knowledgePopulated": 5, "hasNow": true, "hasSkills": true, "paths": {"dir": "mad/armory", "now": "mad/armory/now.md", "knowledge": "mad/armory/knowledge"}}, {"subArea": "customs", "state": null, "next": null, "blocked": false, "blockedText": null, "parked": false, "lastUpdated": "2026-06-16T19:09:42", "ageDays": 0.1, "freshness": "green", "knowledgeFiles": 5, "knowledgePopulated": 5, "hasNow": true, "hasSkills": true, "paths": {"dir": "mad/customs", "now": "mad/customs/now.md", "knowledge": "mad/customs/knowledge"}}]}, {"domain": "personal", "kind": "knowledge", "title": "personal \u2014 Domain Router (KNOWLEDGE-ONLY)", "router": "personal/CLAUDE.md", "health": "healthy", "healthStatus": "green", "mostUrgent": {"subArea": null, "next": null, "freshness": "green", "reason": "most recent"}, "subAreaTally": [{"subArea": "(flat)", "status": "green"}], "lastUpdated": "2026-06-16T13:35:56", "freshness": "green", "rhythm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 6], "graph": null, "subAreas": [{"subArea": null, "state": null, "next": null, "blocked": false, "blockedText": null, "parked": false, "lastUpdated": "2026-06-16T13:35:56", "ageDays": 0.4, "freshness": "green", "knowledgeFiles": 5, "knowledgePopulated": 0, "hasNow": false, "hasSkills": false, "paths": {"dir": "personal", "now": null, "knowledge": "personal/knowledge"}}]}, {"domain": "zus", "kind": "knowledge", "title": "zus \u2014 Domain Router (ONE domain, FOUR sub-areas)", "router": "zus/CLAUDE.md", "health": "healthy", "healthStatus": "green", "mostUrgent": {"subArea": "_shared", "next": null, "freshness": "green", "reason": "most recent"}, "subAreaTally": [{"subArea": "_shared", "status": "green"}, {"subArea": "app", "status": "green"}, {"subArea": "intel", "status": "green"}, {"subArea": "web", "status": "green"}], "lastUpdated": "2026-06-16T19:18:57", "freshness": "green", "rhythm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 26], "graph": {"name": "zus-legacy", "html": "_graphs/zus-legacy/graphify-out/graph.html", "exists": true}, "subAreas": [{"subArea": "_shared", "state": null, "next": null, "blocked": false, "blockedText": null, "parked": false, "lastUpdated": "2026-06-16T19:18:57", "ageDays": 0.1, "freshness": "green", "knowledgeFiles": 5, "knowledgePopulated": 5, "hasNow": false, "hasSkills": false, "paths": {"dir": "zus/_shared", "now": null, "knowledge": "zus/_shared/knowledge"}}, {"subArea": "app", "state": null, "next": null, "blocked": false, "blockedText": null, "parked": false, "lastUpdated": "2026-06-16T19:18:29", "ageDays": 0.1, "freshness": "green", "knowledgeFiles": 5, "knowledgePopulated": 5, "hasNow": true, "hasSkills": true, "paths": {"dir": "zus/app", "now": "zus/app/now.md", "knowledge": "zus/app/knowledge"}}, {"subArea": "intel", "state": null, "next": "(watch) decoderubens2.py:188 writes tag not clanId \u2014 use decoderoster.py for roster TSVs.", "blocked": false, "blockedText": null, "parked": false, "lastUpdated": "2026-06-16T19:16:34", "ageDays": 0.1, "freshness": "green", "knowledgeFiles": 5, "knowledgePopulated": 5, "hasNow": true, "hasSkills": false, "paths": {"dir": "zus/intel", "now": "zus/intel/now.md", "knowledge": "zus/intel/knowledge"}}, {"subArea": "web", "state": null, "next": null, "blocked": false, "blockedText": null, "parked": false, "lastUpdated": "2026-06-16T19:17:26", "ageDays": 0.1, "freshness": "green", "knowledgeFiles": 5, "knowledgePopulated": 5, "hasNow": true, "hasSkills": true, "paths": {"dir": "zus/web", "now": "zus/web/now.md", "knowledge": "zus/web/knowledge"}}]}, {"domain": "_system", "kind": "meta", "title": "_system", "router": null, "health": "healthy", "healthStatus": "green", "mostUrgent": {"subArea": null, "next": null, "freshness": "green", "reason": "most recent"}, "subAreaTally": [{"subArea": "(flat)", "status": "green"}], "lastUpdated": "2026-06-16T22:22:45", "freshness": "green", "rhythm": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5], "graph": null, "subAreas": [{"subArea": null, "state": null, "next": null, "blocked": false, "blockedText": null, "parked": false, "lastUpdated": "2026-06-16T22:22:45", "ageDays": 0.0, "freshness": "green", "knowledgeFiles": 0, "knowledgePopulated": 0, "hasNow": false, "hasSkills": false, "paths": {"dir": "_system", "now": null, "knowledge": null}}]}]};
+
+const esc = s => (s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const dot = s => `<span class="dot ${s}"></span>`;
+
+function sparkline(arr){
+  const max = Math.max(1, ...arr);
+  return `<div class="spark" title="file changes · last ${arr.length}d">`+
+    arr.map(v=>`<i class="${v>0?'hot':''}" style="height:${Math.max(2, Math.round(v/max*22))}px"></i>`).join('')+`</div>`;
+}
+
+function domainCard(d){
+  const tally = d.subAreaTally.map(t=>`<span class="pill">${dot(t.status)}${esc(t.subArea)}</span>`).join('');
+  const u = d.mostUrgent;
+  const urgent = u && (u.next||u.subArea)
+    ? `<div class="urgent"><span class="k">where to look · ${esc(u.reason)}${u.subArea?(' · '+esc(u.subArea)):''}</span>${u.next?esc(u.next):'<span class="none">no next-action set</span>'}</div>`
+    : `<div class="urgent"><span class="k">where to look</span><span class="none">all current · no flags</span></div>`;
+  const glink = d.graph
+    ? (d.graph.exists
+        ? `<span class="glink" onclick="event.stopPropagation();openGraph('${esc(d.graph.html)}')">&#9638; code-graph</span>`
+        : `<span class="glink off">&#9638; no graph</span>`)
+    : `<span class="glink off">&mdash;</span>`;
+  return `<div class="card click ${d.kind==='meta'?'meta':''}" onclick="showDetail('${d.domain}')">
+    <div class="c-top">
+      <div><div class="dname">${esc(d.domain)}</div><div class="dtag">${esc(d.title)}</div></div>
+      <span class="health ${d.healthStatus==='green'?'healthy':d.healthStatus==='amber'?'attention':'critical'}">${esc(d.health)}</span>
+    </div>
+    <div class="tally">${tally}</div>
+    ${urgent}
+    <div class="c-bot">${sparkline(d.rhythm)}${glink}</div>
+  </div>`;
+}
+
+function subAreaCard(sa){
+  const flags = [];
+  if(sa.blocked) flags.push(`<span class="flag blocked">blocked</span>`);
+  if(sa.parked)  flags.push(`<span class="flag parked">parked</span>`);
+  flags.push(`<span class="flag kn">${sa.knowledgePopulated}/${sa.knowledgeFiles} knowledge</span>`);
+  if(sa.hasSkills) flags.push(`<span class="flag sk">skills</span>`);
+  const v = (x)=> x ? `<span class="v">${esc(x)}</span>` : `<span class="v empty">&mdash; not set</span>`;
+  return `<div class="sa">
+    <h4>${dot(sa.freshness)}${esc(sa.subArea||'(flat)')}</h4>
+    <div class="age">${sa.lastUpdated?('updated '+esc(sa.lastUpdated.replace('T',' '))+' · '+sa.ageDays+'d'):'never'}</div>
+    <div class="row"><span class="k">state · current focus</span>${v(sa.state)}</div>
+    <div class="row"><span class="k">next action</span>${v(sa.next)}</div>
+    ${sa.blocked?`<div class="row"><span class="k">blocked</span><span class="v">${esc(sa.blockedText)}</span></div>`:''}
+    <div class="flags">${flags.join('')}</div>
+  </div>`;
+}
+
+function showOverview(){
+  document.getElementById('overview').style.display='';
+  document.getElementById('detail').style.display='none';
+  window.scrollTo(0,0);
+}
+function showDetail(id){
+  const d = DATA.domains.find(x=>x.domain===id);
+  const gbtn = d.graph && d.graph.exists
+    ? `<span class="glink" onclick="openGraph('${esc(d.graph.html)}')">&#9638; open ${esc(d.graph.name)} code-graph</span>` : '';
+  document.getElementById('detailbody').innerHTML =
+    `<div class="d2head"><div class="dname">${esc(d.domain)}</div>
+       <span class="health ${d.healthStatus==='green'?'healthy':d.healthStatus==='amber'?'attention':'critical'}">${esc(d.health)}</span>
+       ${gbtn}</div>
+     <div class="dtag" style="margin-bottom:16px">${esc(d.title)}${d.router?(' · '+esc(d.router)):''}</div>
+     <div class="grid">${d.subAreas.map(subAreaCard).join('')}</div>`;
+  document.getElementById('overview').style.display='none';
+  document.getElementById('detail').style.display='';
+  window.scrollTo(0,0);
+}
+function openGraph(rel){
+  window.open('../../'+rel, '_blank');   // graph.html lives under the vault, relative to _system/dashboard/
+}
+
+function init(){
+  document.getElementById('ovgrid').innerHTML = DATA.domains.map(domainCard).join('');
+  document.getElementById('genline').textContent =
+    'generated '+DATA.generatedAt.replace('T',' ')+' · phase '+DATA.phase+' · static · read-only';
+  document.getElementById('metar').innerHTML =
+    'fresh thresholds: <code>green&lt;'+DATA.freshnessThresholds.greenDays+'d · amber&le;'+DATA.freshnessThresholds.amberDays+'d</code><br>'+
+    'vault: <code>'+esc(DATA.vaultPath)+'</code>';
+  document.getElementById('foot').innerHTML =
+    '<span>regenerate: <code>python3 _system/dashboard/extract_dashboard.py</code></span>'+
+    '<span>read-only surface · writes only to _system/dashboard/ · triggers = phase 3</span>';
+}
+init();
+</script>
+</body>
+</html>
