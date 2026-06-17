@@ -20,3 +20,7 @@
   doesn't kill the in-flight send (`db43c819`).
 - **Committed credentials in tracked code** (`lib/r2.ts`, shared infra) — a secrets-in-code hygiene
   debt; see the recon FINDINGS security flag. **Separate remediation task — not actioned here.**
+
+## Related
+- [[mad/_shared/knowledge/Architecture|Architecture]] — the infra these traps live in
+- [[mad/_shared/knowledge/Lessons|Lessons]] — patterns that defuse them

@@ -9,3 +9,7 @@
 - **Keep tooling-specific contracts out of the shared concept layer.** Share understanding, not
   implementation — web and app share no code, so `_shared` is concepts, and the decode contract is in
   `intel/`.
+
+## Related
+- [[zus/_shared/knowledge/Gotchas|Gotchas]] — the identity/clan traps these lessons avoid
+- [[zus/intel/knowledge/Decisions|intel decisions]] — the field [12]-not-[13] clan-id rule

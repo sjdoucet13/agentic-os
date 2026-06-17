@@ -16,3 +16,8 @@ The ZUS clan-intelligence platform (game: **Total Battle**). Multi-clan-capable,
 - **Recruitment** — public intake form → Recruits doc → Discord notify → admin review/finalize.
 - **advancedcalc** — battle-strength engine ("magic-ratio"; effective squad strength; attack-order).
 - **Roles** — site role (platform-wide) vs clan role (per `accounts[]` entry). See Decisions.
+
+## Related
+- [[zus/web/knowledge/Architecture|Architecture]] — how these entities are served
+- [[zus/intel/knowledge/Domain|intel contract]] — origin of the `titles` binary string on Players
+- [[zus/_shared/knowledge/Domain|shared concepts]] — clanSlug + the player-identity model

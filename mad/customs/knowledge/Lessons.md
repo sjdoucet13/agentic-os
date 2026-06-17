@@ -11,3 +11,7 @@
 - **Blank images ≠ configurable images.** The seeded templates used catalog photos with engravings
   baked in. Procuring true blanks is a separate pass from seeding; track the image sources (vendor
   glamour shot vs true blank vs alternate views).
+
+## Related
+- [[mad/customs/knowledge/Architecture|Architecture]] — where these lessons apply
+- [[mad/customs/knowledge/Gotchas|Gotchas]] — the traps they avoid

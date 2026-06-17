@@ -15,3 +15,7 @@
 - **Frame economy** — one capture per unit; the previous unit's OCR verify rides the next unit's
   location capture.
 - **One routine at a time;** IME suppressed during routines (re-enabled in `finally`).
+
+## Related
+- [[zus/app/knowledge/Architecture|Architecture]] — what these choices built
+- [[zus/app/knowledge/Gotchas|Gotchas]] — the constraints behind them

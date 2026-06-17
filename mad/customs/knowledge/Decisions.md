@@ -13,3 +13,7 @@
   from armory.
 - **Flat customs shipping** ($14.95, hardcoded) for now; an admin-configurable rate is deferred to a
   later customs-admin sprint.
+
+## Related
+- [[mad/customs/knowledge/Architecture|Architecture]] — what these choices built
+- [[mad/customs/knowledge/Lessons|Lessons]] — what they taught

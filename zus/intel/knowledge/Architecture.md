@@ -31,3 +31,9 @@ mitmproxy capture (`.hex`) → `decode_roster.py` (decode → 10-col `rubens_ros
 `roster-capture-ingest.ts` (dedup by `gamePlayerId` → filter `clanId === 1313036` → upsert the
 platform's `Players` with the title sequence + computed bonus) → web platform. Designed to run from a
 web admin handler.
+
+## Related
+- [[zus/intel/knowledge/Domain|Domain]] — the 23-field struct, clan_id, title map, TSV schema
+- [[zus/intel/knowledge/Decisions|Decisions]] — why field [12] not tag [13]
+- [[zus/intel/knowledge/Gotchas|Gotchas]] — the decode_rubens2.py:188 bug
+- [[zus/web/knowledge/Architecture|web platform]] — where this ingest lands (the intel→web bridge)

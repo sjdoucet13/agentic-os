@@ -10,3 +10,7 @@
 - **Treat `gamePlayerId` as the stable identity; names are mutable aliases** (rename continuity).
 - **`_shared` holds concepts only.** Because web and app share no code, there is no shared codebase to
   document here — only shared domain understanding.
+
+## Related
+- [[zus/_shared/knowledge/Architecture|Architecture]] — the shared conceptual model
+- [[zus/intel/knowledge/Architecture|intel]] — where the protocol/decode contract is kept

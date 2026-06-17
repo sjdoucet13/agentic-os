@@ -9,3 +9,7 @@
   filters.
 - **Names are not identity.** Use `gamePlayerId`; a rename without identity continuity splits a
   player's history (see the wolf-stone rename incident in `web/`).
+
+## Related
+- [[zus/_shared/knowledge/Architecture|Architecture]] — the identity / isolation model
+- [[zus/_shared/knowledge/Domain|Domain]] — clanSlug vs clan_id vs gamePlayerId

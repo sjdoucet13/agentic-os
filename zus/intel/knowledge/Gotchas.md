@@ -14,3 +14,7 @@
 - **Capture/token is time-sensitive** (tb_walk: capture + run in the same sitting; a stale token →
   401/403, unhandled).
 - **Dedup is last-wins by `gamePlayerId`** — a mid-scroll move records the final state.
+
+## Related
+- [[zus/intel/knowledge/Decisions|Decisions]] — the field [12]-not-[13] rule behind the bug
+- [[zus/intel/knowledge/Architecture|Architecture]] — the scripts these traps live in

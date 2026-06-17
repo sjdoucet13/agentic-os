@@ -15,3 +15,7 @@
 - **OCR is score-only;** the capture-ingest path owns might / hero / titles (`strip-ocr-stat-writes`).
 - **Two-phase reviewed roster commit** (preview → decide → write) for the network-capture ingest.
 - **JWT `tokenVersion` revocation** — lazy invalidation on mutation (no force-logout per deploy).
+
+## Related
+- [[zus/web/knowledge/Architecture|Architecture]] — what these choices built
+- [[zus/web/knowledge/Gotchas|Gotchas]] — the site-role token bug the model caused

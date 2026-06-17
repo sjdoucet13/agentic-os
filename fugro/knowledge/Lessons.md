@@ -23,3 +23,7 @@
   hits all 3 PMs).
 - **Forward-only auto-advance with a hand-edit guard** is cheap (compare current vs target in the
   lifecycle list) and prevents data loss.
+
+## Related
+- [[fugro/knowledge/Decisions|Decisions]] — the choices behind these lessons
+- [[fugro/knowledge/Gotchas|Gotchas]] — the traps they avoid

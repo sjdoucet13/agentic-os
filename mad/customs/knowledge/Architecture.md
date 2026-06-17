@@ -29,3 +29,9 @@ The Mad Customs storefront (`madcustomstx.com` / `/boutique`) + the made-to-orde
 `proof_required` → Order `ART_REVIEW` → admin uploads proof (`proofR2Key`) → customer approve/revise
 via a 1-use token → `READY_FOR_PRODUCTION` → `IN_PRODUCTION` → `READY_TO_SHIP` → `SHIPPED`. Flat
 $14.95 customs shipping.
+
+## Related
+- [[mad/customs/knowledge/Decisions|Decisions]] — why Konva / Sharp / proof gate
+- [[mad/customs/knowledge/Domain|Domain]] — blanks, listings, buy modes
+- [[mad/customs/knowledge/Gotchas|Gotchas]] — calibration + upload footguns
+- [[mad/_shared/knowledge/Architecture|shared infra]] — the proxy / payment / R2 it builds on

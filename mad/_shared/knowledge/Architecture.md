@@ -34,3 +34,9 @@ gated by `requireAdmin()`.
   checkout (400).
 - **Payment** (`/api/payment/process`): server revalidates prices from DB → Order PENDING → NMI charge
   → PAID → Resend confirmation + QB sync async via `after()`.
+
+## Related
+- [[mad/_shared/knowledge/Decisions|Decisions]] — why this infra
+- [[mad/_shared/knowledge/Domain|Domain]] — the LLC + storefront entities
+- [[mad/_shared/knowledge/Gotchas|Gotchas]] — infra footguns
+- [[mad/_shared/knowledge/Lessons|Lessons]] — what the infra taught

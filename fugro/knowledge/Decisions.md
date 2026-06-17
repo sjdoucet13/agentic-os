@@ -19,3 +19,7 @@
 - **Forward-only status auto-advance**, never clobbering PM hand-edits (status set on create only).
 - **No email auto-send.** Invoice/tripsheet emails are drafted into the PM's own Outlook; the PM
   reviews and sends (no shared service account in the local beta).
+
+## Related
+- [[fugro/knowledge/Architecture|Architecture]] — what these choices built
+- [[fugro/knowledge/Lessons|Lessons]] — what they taught

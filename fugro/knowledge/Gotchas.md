@@ -25,3 +25,7 @@
   from their own Outlook. Signature injected via the `GetInspector` trick.
 - **Excel COM is synchronous on the Flask server** — a slow generation blocks the page (~30s); noted
   as a UX backlog item.
+
+## Related
+- [[fugro/knowledge/Architecture|Architecture]] — the components these traps live in
+- [[fugro/knowledge/Lessons|Lessons]] — patterns that defuse them

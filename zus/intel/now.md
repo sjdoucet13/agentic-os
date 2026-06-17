@@ -13,3 +13,7 @@
 
 ## Blocked
 - _(none)_
+
+## Related
+- [[zus/intel/knowledge/Architecture|Architecture]] — the decode/ingest pipeline
+- [[zus/intel/knowledge/Gotchas|Gotchas]] — the decode_rubens2 bug + footguns

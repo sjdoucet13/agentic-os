@@ -30,3 +30,10 @@ Leaderboard / scores, AWOL tracking, roster capture, participation analytics, **
 - **Rosters / player stats** — from the **intel** `roster-capture-ingest.ts` bridge (network capture →
   decode → upsert `Players`); this owns might / hero / titles.
 - The `screenshot-pipeline` branch refactors a shared score-write core (`resolveNorm` / `writeScore`).
+
+## Related
+- [[zus/web/knowledge/Decisions|Decisions]] — token model, cutover, maintenance mode
+- [[zus/web/knowledge/Domain|Domain]] — Players, Scores, Events, roles
+- [[zus/web/knowledge/Gotchas|Gotchas]] — the site-role token bug
+- [[zus/intel/knowledge/Architecture|intel]] — the roster ingest that feeds `Players`
+- [[zus/_shared/knowledge/Architecture|shared concepts]] — clanSlug identity / isolation

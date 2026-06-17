@@ -13,3 +13,7 @@
 - **Hand-rolled LE-MessagePack** (stdlib only), not a dependency.
 - **`decode_roster.py` + `roster-capture-ingest.ts` are the authoritative pair.** `decode_rubens2.py`
   extends capture scope but must NOT generate the roster TSV (field bug — see Gotchas).
+
+## Related
+- [[zus/intel/knowledge/Domain|Domain]] — the constants these decisions encode
+- [[zus/intel/knowledge/Gotchas|Gotchas]] — the field-bug regression to avoid

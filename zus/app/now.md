@@ -11,3 +11,7 @@
 
 ## Blocked
 - _(none)_
+
+## Related
+- [[zus/app/knowledge/Architecture|Architecture]] — the automation engine
+- [[zus/app/knowledge/Gotchas|Gotchas]] — calibration / scroll / OCR footguns

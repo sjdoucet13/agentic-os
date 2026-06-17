@@ -12,3 +12,8 @@
 - **Player** — a clan member tracked on the platform (might, hero level, vip, titles, coords).
 - **Titles** — in-game ranks; the id→name map and the binary `titles` string convention are defined in
   `intel/` (origin) and stored on the web platform's `Players`.
+
+## Related
+- [[zus/_shared/knowledge/Architecture|Architecture]] — the shared conceptual model
+- [[zus/intel/knowledge/Domain|intel contract]] — the numeric clan_id + the title id→name map
+- [[zus/web/knowledge/Domain|web Players]] — where clanSlug + titles are used on the platform

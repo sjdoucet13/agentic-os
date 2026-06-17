@@ -16,3 +16,7 @@
 - **Look-alike templates → `DUPLICATE_TARGET` halt** — capture tier badges to disambiguate.
 - **Fling on fast drags** — `SWIPE_DURATION_MS = 600` (tested on tablet); anti-fling end-hold; tuning is
   manual per device from `RUN_STATS`.
+
+## Related
+- [[zus/app/knowledge/Architecture|Architecture]] — the engine these traps live in
+- [[zus/app/knowledge/Lessons|Lessons]] — patterns that defuse them

@@ -12,3 +12,7 @@
 
 ## Blocked
 - _(none)_
+
+## Related
+- [[mad/armory/knowledge/Architecture|Architecture]] — the armory pipeline
+- [[mad/armory/knowledge/Gotchas|Gotchas]] — compliance footguns

@@ -14,5 +14,9 @@
 - **OrderAuditLog** records every order mutation (actor type + timestamp) for the regulated paper
   trail.
 
+## Related
+- [[mad/armory/knowledge/Architecture|Architecture]] — what these choices built
+- [[mad/armory/knowledge/Lessons|Lessons]] — what they taught
+
 > ⚠️ COMPLIANCE WALL: FFL / Class-02-SOT / NFA knowledge lives ONLY here
 > (mad/armory). Never copy into customs or _shared.

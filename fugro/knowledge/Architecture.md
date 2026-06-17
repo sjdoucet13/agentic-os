@@ -40,3 +40,8 @@ actions) → Excel outputs (xlsx + PDF to `J:\…\Invoicing\`) + Outlook drafts.
 ## Dataverse tables
 Project, Cost Tracker State, Time Ticket, Team Member, Rate / Rate Table / Client Rate Map (C1),
 Transit Times, Project Note (immutable action log).
+
+## Related
+- [[fugro/knowledge/Domain|Domain]] — what the glossary terms mean
+- [[fugro/knowledge/Decisions|Decisions]] — why this stack / the phased build
+- [[fugro/knowledge/Gotchas|Gotchas]] — fragile spots in these components

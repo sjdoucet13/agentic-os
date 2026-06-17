@@ -25,3 +25,6 @@ pending list, tripsheet, cost tracker, time tickets, and invoicing, using Datave
   (returned) → Awaiting Client Update / Invoiced / Problem with Payment. Forward-only.
 - **Environment** — one shared `USA Positioning` Dataverse env; 3 PMs; service principal
   `pm-automation-sync` (System Customizer role).
+
+## Related
+- [[fugro/knowledge/Architecture|Architecture]] — how these entities flow through the system

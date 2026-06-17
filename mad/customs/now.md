@@ -11,3 +11,7 @@
 
 ## Blocked
 - _(none)_
+
+## Related
+- [[mad/customs/knowledge/Architecture|Architecture]] — the customs pipeline
+- [[mad/customs/knowledge/Gotchas|Gotchas]] — the live footguns

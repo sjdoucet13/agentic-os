@@ -23,3 +23,7 @@
 - **tb_walk ladder CSVs:** `zus_rbs_ladder.csv` = `rank,name,score,instance`;
   `full_board/sweep/hunt/div` = `rank,uid,name_clan,score`.
 - **tb_walk opcodes:** 24003 standings · 24001 catalog · 24002 subject standings.
+
+## Related
+- [[zus/intel/knowledge/Architecture|Architecture]] — the capture→decode→ingest data flow
+- [[zus/web/knowledge/Domain|web Players]] — where `titles` (this title map) is stored on the platform

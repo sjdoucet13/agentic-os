@@ -18,5 +18,9 @@
   in this pass.
 - **QuickBooks sync is stubbed** — orders don't auto-sync to accounting; manual reconciliation today.
 
+## Related
+- [[mad/armory/knowledge/Architecture|Architecture]] — the compliance surfaces these traps sit on
+- [[mad/armory/knowledge/Lessons|Lessons]] — the regulated-launch lessons
+
 > ⚠️ COMPLIANCE WALL: FFL / Class-02-SOT / NFA knowledge lives ONLY here
 > (mad/armory). Never copy into customs or _shared.

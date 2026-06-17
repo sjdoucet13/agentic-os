@@ -28,3 +28,9 @@ Routines: **Delete** (bottom-up), **Revive**, **Fill** (ordered fill + OCR read-
 column-batch OCR, mass-drift handoff to Fill). Wizards: WizardActivity (capture template),
 GeometryActivity (5-tap calibration), FormationActivity (formation editor), RosterActivity (roster
 capture).
+
+## Related
+- [[zus/app/knowledge/Decisions|Decisions]] — why device-storage templates, generic engine
+- [[zus/app/knowledge/Domain|Domain]] — routines, calibration, formation, Phase D
+- [[zus/app/knowledge/Gotchas|Gotchas]] — calibration + scroll + OCR fragilities
+- [[zus/app/knowledge/Lessons|Lessons]] — what automation taught

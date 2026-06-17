@@ -15,5 +15,9 @@
   schemas (UPC padding, category IDs, pricing fields); the adapter/normalization layer
   (`CategoryMapping`, normalization scripts) is essential but brittle — keep it centralized.
 
+## Related
+- [[mad/armory/knowledge/Decisions|Decisions]] — the choices behind these lessons
+- [[mad/armory/knowledge/Gotchas|Gotchas]] — the traps they avoid
+
 > ⚠️ COMPLIANCE WALL: FFL / Class-02-SOT / NFA knowledge lives ONLY here
 > (mad/armory). Never copy into customs or _shared.

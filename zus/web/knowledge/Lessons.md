@@ -13,3 +13,7 @@
   renames; pairs with the stable `gamePlayerId` identity from `intel`.
 - **Separate the two role claims explicitly.** Conflating site role and clan role in one `role` claim
   caused the `/admin` bounce — name them so they can't be confused.
+
+## Related
+- [[zus/web/knowledge/Decisions|Decisions]] — the choices behind these lessons
+- [[zus/web/knowledge/Gotchas|Gotchas]] — the bugs that taught them

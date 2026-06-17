@@ -16,3 +16,7 @@
   justifies it.
 - **Pre-launch lockdown** — foundry gate + search-engine shutoff (robots `Disallow: /`, empty sitemap,
   `noindex/nofollow`) behind `PRE_LAUNCH_LOCKDOWN` constants, original rules preserved for the flip.
+
+## Related
+- [[mad/_shared/knowledge/Architecture|Architecture]] — what these choices built
+- [[mad/_shared/knowledge/Lessons|Lessons]] — what they taught

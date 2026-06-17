@@ -14,3 +14,7 @@
   compute guards are the baseline, not the ceiling.
 - **The storefront header is the seam.** Centralize its read so one missed layer can't leak the wrong
   storefront's theme or auth context.
+
+## Related
+- [[mad/_shared/knowledge/Architecture|Architecture]] — the infra these lessons came from
+- [[mad/_shared/knowledge/Gotchas|Gotchas]] — the traps behind them

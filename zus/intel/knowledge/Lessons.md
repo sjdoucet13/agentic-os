@@ -12,3 +12,7 @@
 - **Stable per-account id + alias back-fill** survives renames — don't key on names.
 - **Guardrail discipline:** record the decode contract + constants in knowledge; keep the ingest's DB
   connection/credentials out (config/secret, not contract).
+
+## Related
+- [[zus/intel/knowledge/Decisions|Decisions]] — the choices behind these lessons
+- [[zus/intel/knowledge/Gotchas|Gotchas]] — the traps they avoid

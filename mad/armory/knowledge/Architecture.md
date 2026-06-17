@@ -26,5 +26,11 @@ Firearm surcharge ($14.99 flat / free > $499); split-cart surcharge ($2.99/split
 (bump shipping if gross margin < 8%); local pickup (Katy / Fulshear / Sugar Land). Order PENDING →
 NMI charge → PAID; QuickBooks sync is stubbed (TODOs).
 
+## Related
+- [[mad/armory/knowledge/Decisions|Decisions]] — why feeds / FFL / gating
+- [[mad/armory/knowledge/Domain|Domain]] — FFL / SOT / NFA glossary
+- [[mad/armory/knowledge/Gotchas|Gotchas]] — compliance fragilities
+- [[mad/_shared/knowledge/Architecture|shared infra]] — the shared catalog + NMI payment it builds on
+
 > ⚠️ COMPLIANCE WALL: FFL / Class-02-SOT / NFA knowledge lives ONLY here
 > (mad/armory). Never copy into customs or _shared.

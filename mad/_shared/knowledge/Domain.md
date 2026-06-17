@@ -15,3 +15,8 @@
   `Order.originDomain` scopes orders and the admin dashboards.
 - **Lifecycle states** (shared): orders move PENDING → PAID → fulfillment states; customs adds an
   ART_REVIEW / proof loop (see `customs/`).
+
+## Related
+- [[mad/_shared/knowledge/Architecture|Architecture]] — how these entities are wired
+- [[mad/customs/knowledge/Domain|Mad Customs domain]] — the customs sub-area's specifics
+  _(armory's regulated specifics stay walled in `armory/` — intentionally not linked from `_shared`)_

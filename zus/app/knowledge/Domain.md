@@ -15,3 +15,7 @@ the accessibility service: bulk delete, revive, fill formations, and a daily **S
   cheapest repair (inline repair, or hand off to Fill on mass drift).
 - **Phase D (future)** — server-pushed profiles (formation / labels / entitlements) via a device-link
   token; would consume the intel/web contract. **Not yet built.**
+
+## Related
+- [[zus/app/knowledge/Architecture|Architecture]] — how the engine works today
+- [[zus/intel/knowledge/Domain|intel contract]] — what a future Phase D server-push would consume

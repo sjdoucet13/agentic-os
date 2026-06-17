@@ -15,3 +15,9 @@ captures the concepts the platform (and `intel/`) reason about, not a shared cod
   display names are mutable aliases (with rename history).
 - **Pointer:** the binary protocol/decode, the numeric `clan_id`, the field indices, the title id→name
   map, and the export/ingest contract all live in **`intel/`** — not here.
+
+## Related
+- [[zus/_shared/knowledge/Decisions|Decisions]] — why clanSlug, why protocol lives in intel
+- [[zus/_shared/knowledge/Domain|Domain]] — the clan / clanSlug / player vocabulary
+- [[zus/intel/knowledge/Domain|intel contract]] — where the protocol/clan_id/title map actually live
+- [[zus/web/knowledge/Architecture|web platform]] — where clanSlug isolation is enforced

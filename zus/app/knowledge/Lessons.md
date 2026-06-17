@@ -12,3 +12,7 @@
   settles before the next capture.
 - **Measured geometry beats guessed viewport** — a measured visible-list window replaced guessed
   viewport geometry and removed a whole class of failures.
+
+## Related
+- [[zus/app/knowledge/Gotchas|Gotchas]] — the failures these lessons fix
+- [[zus/app/knowledge/Architecture|Architecture]] — where they apply

@@ -18,5 +18,9 @@ jurisdiction). Value prop = local pickup + FFL-transfer convenience against thin
 - **Restricted states** — per-item `restricted_states[]` (ammo bans, magazine caps, SBR / assault-
   weapon bans, suppressor rules) enforced at checkout.
 
+## Related
+- [[mad/armory/knowledge/Architecture|Architecture]] — how compliance is enforced in code
+- [[mad/armory/knowledge/Gotchas|Gotchas]] — where the regulated edges are fragile
+
 > ⚠️ COMPLIANCE WALL: FFL / Class-02-SOT / NFA knowledge lives ONLY here
 > (mad/armory). Never copy into customs or _shared.

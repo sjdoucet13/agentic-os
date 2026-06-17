@@ -10,3 +10,7 @@
 
 ## Blocked
 - _(none)_
+
+## Related
+- [[fugro/knowledge/Architecture|Architecture]] — how PM_Auto is built
+- [[fugro/knowledge/Gotchas|Gotchas]] — the live footguns

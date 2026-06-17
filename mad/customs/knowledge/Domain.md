@@ -18,3 +18,6 @@ revision window → production → ship.
 - **Buy modes (roadmap)** — (1) Buy As-Is (finished goods, Phase 1), (2) Light Personalization
   (text + font), (3) Full Customize (Konva configurator) (Phases 2+).
 - **Material profile** — e.g. laser_metal / laser_wood / dtf_cotton — drives the composite render tint.
+
+## Related
+- [[mad/customs/knowledge/Architecture|Architecture]] — how these entities flow through the pipeline

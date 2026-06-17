@@ -17,3 +17,7 @@
 - **Collections not yet wired into discovery.** The schema + admin CRUD exist, but the
   `/boutique/collections` + `/boutique/collections/[slug]` storefront pages aren't built yet.
 - **Buy-modes (2) and (3) not implemented** — Phase 1 ships Buy-As-Is only.
+
+## Related
+- [[mad/customs/knowledge/Architecture|Architecture]] — the components these traps live in
+- [[mad/customs/knowledge/Lessons|Lessons]] — patterns that defuse them

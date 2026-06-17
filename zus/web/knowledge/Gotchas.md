@@ -16,3 +16,7 @@
 - **`.env` is committed with live prod secrets** (Mongo prod URI + password, `GEMINI_API_KEY`,
   `JWT_SECRET`, Discord/UploadThing keys). **SECURITY — flagged in recon FINDINGS; separate remediation
   task (rotate + history scrub), not actioned in this pass.**
+
+## Related
+- [[zus/web/knowledge/Decisions|Decisions]] — the site-role vs clan-role token model behind the bug
+- [[zus/web/knowledge/Architecture|Architecture]] — the middleware/auth layer involved
