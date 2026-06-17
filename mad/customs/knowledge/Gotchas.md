@@ -6,6 +6,10 @@
 - **MockupTemplate calibration in progress.** The 2 seeded templates (LTM7216 Polar Camel tumbler,
   GFT220 bamboo board) have baked-in sample engravings and wrong reference dimensions (set to 1024 vs
   actual 1800×1800). Source true blanks, recalibrate box coordinates, re-run the idempotent seed.
+- **Konva/Sharp coordinate-origin mismatch when calibrating (verify).** When recalibrating the
+  engraving-box coords, confirm the client canvas (Konva) and the server composite (Sharp) agree on the
+  box ORIGIN — top-left vs center. A mismatch makes the on-screen proof diverge from the produced
+  engraving. _(2026-06-17, promoted from _inbox during report)_
 - **Presigned uploads are unauthenticated.** Only cartId-UUID opacity gates them → storage-flood +
   Sharp CPU-burn vectors. Hardened with a per-IP rate limit (20/10min) + Sharp 50MP guard
   (`f586bc1c`); PDF dropped from the presign allowlist (SVG stays). Per-cartId token binding remains a
