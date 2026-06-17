@@ -15,12 +15,14 @@ stats are derived from how regularly these happen.
 
 - Write it down **immediately**, in the **correct domain**, never cross-domain.
 - Raw captures land fast; precision comes later in RECONCILE. Speed > polish here.
+- The capture surface is the domain's append-only **`_inbox.md`** (e.g. `mad/armory/_inbox.md`),
+  created on first capture; RECONCILE later promotes inbox items into `knowledge/`.
 - If it doesn't obviously belong to one domain, capture it and **flag the ambiguity** —
   do not guess a domain or, worse, bridge two.
 - Compliance-relevant armory items capture **only** under `mad/armory/` (see the
   compliance wall in `mad/CLAUDE.md`).
 
-**Skill:** `_ops/skills/capture/`
+**Skill:** `_ops/skills/capture/` — `capture.py` (active): appends to `_inbox.md`, allow-list domains only.
 
 ---
 

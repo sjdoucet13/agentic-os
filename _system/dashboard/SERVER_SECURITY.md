@@ -121,8 +121,10 @@ third-party code runs inside the trusted server. (Mirrors the extractor's stdlib
 
 - [x] Reviewed; controls in §4 and posture in §5 approved.
 - [x] **D1 = defer the ⌘ prompt (buttons-first) · D2 = on-demand · D3 = localhost only**
-- [ ] Cleared to build `capture` end-to-end — ⚠ **BLOCKED on §8** (skills are stubs; needs
-      a go-ahead to implement the capture skill + define the capture surface).
+- [x] Capture surface confirmed (`_inbox.md`); the `capture` skill is now implemented +
+      tested (`_ops/skills/capture/capture.py`). See §8.
+- [ ] Remaining Phase 3 = build the localhost server itself — deferred to a fresh session
+      (cost + clean context for the security-critical component); the skill it spawns is ready.
 
 _Signed: user (dashboard sign-off) · Date: 2026-06-17_
 
@@ -152,3 +154,9 @@ They need their own append-only surface, per domain, wall-respecting.
 
 This is net-new vault structure + skill implementation (deferred on purpose), so it needs
 an explicit go-ahead before the server has anything real to call.
+
+**RESOLVED (2026-06-17):** user confirmed the `_inbox.md` surface; `capture.py` is
+implemented to the proposed design and tested (create-with-header, append-no-dup-header,
+allow-list reject, empty reject, stdin). The server now has a real, fixed, no-eval write
+path to spawn (`python3 _ops/skills/capture/capture.py --domain <enum>`, text on stdin).
+Only the server itself remains — build it in a fresh session per D2/D3 and the cost note above.

@@ -17,12 +17,12 @@ work domain.
   keep each invocation inside a single domain and must honor the no-contamination law
   and the `mad` compliance wall.
 
-## Skills (stubs — real logic deferred)
-| Skill | Purpose |
-|---|---|
-| `skills/capture/` | CAPTURE moment — drop a thought/finding into the correct domain |
-| `skills/status-report/` | REPORT moment — summarize a domain's current state + graph staleness |
-| `skills/graph-refresh/` | Run `graphify update` for a repo, then update `_system/state/graph-freshness.json` |
+## Skills
+| Skill | Status | Purpose |
+|---|---|---|
+| `skills/capture/` | **active** | CAPTURE moment — append a thought/finding to the domain's `_inbox.md` (`capture.py`, stdlib) |
+| `skills/status-report/` | stub | REPORT moment — summarize a domain's current state + graph staleness |
+| `skills/graph-refresh/` | stub | Run `graphify update` for a repo, then update `_system/state/graph-freshness.json` |
 
 ## Automations
 See `automations/triggers.md`. Trigger **logic** is deferred (roadmap); the binding
