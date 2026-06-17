@@ -39,3 +39,31 @@ Both sub-areas are served by the read-only graph at `_graphs/mad-custom-tx/`
 - `_shared/knowledge/` — shared (brand/LLC/infra) knowledge, 5-part structure.
 - `customs/{knowledge,skills,now.md}`
 - `armory/{knowledge,skills,now.md}`  ← regulated; compliance wall applies.
+
+## Continuous write-back (standing rule — CC follows this by DEFAULT)
+
+There is no reliable session-close signal, so **reconcile as you go — never batch it for
+the end.** This is pre-authorized standing behavior, not a per-time ask.
+
+- **`now.md`, continuously.** Check an item off the moment it's done, append new items on
+  discovery, pull the next focus up when focus shifts. `now.md` is CC-owned state (humans
+  read it; they don't hand-edit it).
+- **`knowledge/` as it happens.** Record a decision / gotcha / lesson into the right
+  sub-area's `knowledge/` when it occurs — not reconstructed later.
+- **Auto-commit vault state in small increments — pre-authorized, no per-commit
+  confirmation.** You have standing authorization to commit `now.md` / `knowledge/` /
+  `_inbox.md` on the working branch. Don't ask each time; just keep the trail tidy.
+
+### Hard boundary (non-negotiable — this is what makes auto-commit safe)
+- **Explicit paths only:** `git add mad/<sub>/now.md mad/<sub>/knowledge/<file>.md`, etc.
+- **NEVER `git add -A` / `git add .`** — that sweeps WIP code and untracked strays
+  (`y().md`, `_recon/`, `.obsidian/`). Path-explicit add IS the safety mechanism.
+- **NEVER commit code, and NEVER commit to `main`.** Vault state only; working branch only.
+
+### Git topology (confirmed — do not assume)
+The **vault** is its own repo (`/mnt/c/Users/sdouc/projects/agentic-os`). mad's **code** is
+a **separate** repo (`/home/sdoucet/projects/mad-custom-tx-master`, branch `working`).
+Vault-state commits land in the **vault** repo on a **working branch** (currently
+`feat/mad-operating-loop`) — never `main`, never the code repo. Because they are different
+repos, a vault commit physically can't grab mad code; the explicit-path rule additionally
+keeps it from grabbing vault-side code/strays. Full spec: `_ops/specs/operating-loop.md` §2.
