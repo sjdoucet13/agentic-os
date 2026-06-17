@@ -35,7 +35,11 @@ Cover, in roughly this order, keeping it tight:
 - **current focus** (per sub-area if they differ),
 - **in-flight / blocked / parked**,
 - **what shipped since last session — from the COMMITS** (ground truth), not what `now.md`
-  claims. This is the most valuable line: `now.md` is a human-curated head and can lag.
+  claims. **Default to ONE line** in steady state — a summary count, e.g.
+  *"shipped: pre-launch lockdown sweep — 7 commits, Jun 9–11."* **Expand to the itemized
+  list ONLY when the commits contradict what `now.md` claims** — i.e. when you're surfacing
+  drift. The point: the daily brief stays tight, and the detail appears precisely when it's
+  the signal (a stale head). On a normal day, one line; on a drift day, itemize.
 - **recommended next**,
 - **any unprocessed captures** sitting in `_inbox.md` (offer to reconcile them).
 
