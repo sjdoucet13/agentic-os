@@ -1,14 +1,100 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-06-17T07:38:39",
+  "schemaVersion": 4,
+  "version": "v4-missioncontrol",
+  "generatedAt": "2026-06-17T09:16:22",
   "vaultPath": "/mnt/c/Users/sdouc/projects/agentic-os",
   "obsidianVaultPath": "\\\\wsl.localhost\\Ubuntu\\home\\sdoucet\\projects\\agentic-os",
   "freshnessThresholds": {
     "greenDays": 3,
     "amberDays": 10,
-    "rhythmDays": 14
+    "momentumDays": 21
   },
   "phase": 1,
+  "telemetry": {
+    "agentState": "IDLE",
+    "running": 0,
+    "lastSweptIso": "2026-06-17T09:15:10",
+    "lastSweptHours": 0.0,
+    "activeProjects": 3,
+    "codeGraphs": 3,
+    "flags": 2,
+    "parked": 2,
+    "openItems": 19
+  },
+  "urgent": [
+    {
+      "domain": "mad",
+      "label": "mad \u00b7 armory",
+      "text": "\u26d4 Pre-Launch Compliance Audit (TOP PRIORITY \u2014 blocks launch): federal + state firearms + age-gating legal review. Restricted-states coverage is rules-based today, not lawyer-verified.",
+      "severity": "critical",
+      "kind": "focus"
+    },
+    {
+      "domain": "zus",
+      "label": "zus \u00b7 web",
+      "text": "Site-role token bug (FIX NEXT \u2014 live post-cutover): the switchboard mints role = clan role, but the /admin middleware gate expects a site role \u2192 a site super-admin who is only a member in the switched",
+      "severity": "warn",
+      "kind": "focus"
+    },
+    {
+      "domain": "mad",
+      "label": "mad \u00b7 _shared",
+      "text": "Committed Chattanooga FTP credentials in lib/r2.ts \u2014 rotate + git-history scrub (separate remediation task; not actioned).",
+      "severity": "parked",
+      "kind": "parked"
+    },
+    {
+      "domain": "zus",
+      "label": "zus \u00b7 web",
+      "text": "Committed .env with live prod secrets (Mongo / Gemini / JWT) \u2014 rotate + git-history scrub (separate remediation task; not actioned).",
+      "severity": "parked",
+      "kind": "parked"
+    },
+    {
+      "domain": "fugro",
+      "label": "fugro",
+      "text": "Slice B \u2014 PM notes: per-project PM notes (schema \u2192 form \u2192 display). Plan locked, spec handed off; on Commit 1 (Dataverse schema migration).",
+      "severity": "active",
+      "kind": "focus"
+    },
+    {
+      "domain": "mad",
+      "label": "mad \u00b7 _shared",
+      "text": "Google OAuth Brand Verification (FREE, pre-launch must-do): submit the OAuth consent-screen branding so Google sign-in shows the verified app, not the raw Supabase URL.",
+      "severity": "active",
+      "kind": "focus"
+    },
+    {
+      "domain": "mad",
+      "label": "mad \u00b7 customs",
+      "text": "Configurator visual calibration: the 2 seeded MockupTemplates (LTM7216, GFT220) have baked-in sample engravings + wrong reference dims (1024 vs actual 1800\u00b2) \u2014 source true blanks, recalibrate the engr",
+      "severity": "active",
+      "kind": "focus"
+    }
+  ],
+  "graphPanel": {
+    "projects": [
+      {
+        "domain": "mad",
+        "label": "MAD",
+        "src": "../../_graphs/mad-custom-tx/graphify-out/graph.html",
+        "exists": true
+      },
+      {
+        "domain": "zus",
+        "label": "ZUS",
+        "src": "../../_graphs/zus-legacy/graphify-out/graph.html",
+        "exists": true
+      },
+      {
+        "domain": "fugro",
+        "label": "FUGRO",
+        "src": "../../_graphs/PM_Auto/graphify-out/graph.html",
+        "exists": true
+      }
+    ],
+    "default": "mad"
+  },
   "domains": [
     {
       "domain": "_ops",
@@ -22,6 +108,12 @@
         "next": null,
         "freshness": "green",
         "reason": "most recent"
+      },
+      "counts": {
+        "inFlight": 0,
+        "next": 0,
+        "blocked": 0,
+        "parked": 0
       },
       "subAreaTally": [
         {
@@ -44,19 +136,60 @@
         0,
         0,
         0,
-        5,
+        0,
         0
       ],
+      "momentum": {
+        "bars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total": 0,
+        "state": "idle",
+        "word": "idle",
+        "days": 21,
+        "source": "none"
+      },
+      "recentCommits": [],
+      "repo": null,
       "graph": null,
       "backlog": null,
       "subAreas": [
         {
           "subArea": null,
           "state": null,
+          "focusItems": [],
           "next": null,
+          "nextItems": [],
           "blocked": false,
-          "blockedText": null,
+          "blockedItems": [],
           "parked": false,
+          "parkedItems": [],
+          "counts": {
+            "inFlight": 0,
+            "next": 0,
+            "blocked": 0,
+            "parked": 0
+          },
           "lastUpdated": "2026-06-16T13:34:16",
           "ageDays": 0.8,
           "freshness": "green",
@@ -85,6 +218,12 @@
         "freshness": "green",
         "reason": "most recent"
       },
+      "counts": {
+        "inFlight": 1,
+        "next": 4,
+        "blocked": 0,
+        "parked": 0
+      },
       "subAreaTally": [
         {
           "subArea": "(flat)",
@@ -106,9 +245,76 @@
         0,
         0,
         0,
-        7,
-        1
+        0,
+        0
       ],
+      "momentum": {
+        "bars": [
+          11,
+          0,
+          0,
+          0,
+          4,
+          22,
+          6,
+          23,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total": 66,
+        "state": "idle",
+        "word": "cold",
+        "days": 21,
+        "source": "git"
+      },
+      "recentCommits": [
+        {
+          "hash": "22f2866",
+          "date": "2026-06-04",
+          "subject": "both_ways_gate: widen grand-total scan + soft-skip when not found"
+        },
+        {
+          "hash": "08a284b",
+          "date": "2026-06-04",
+          "subject": "Add both_ways_gate.py \u2014 proves Excel cached values tie to Python compute"
+        },
+        {
+          "hash": "85547f9",
+          "date": "2026-06-04",
+          "subject": "Cost tracker: section-level span fill (one button per section header)"
+        },
+        {
+          "hash": "35c9487",
+          "date": "2026-06-04",
+          "subject": "Cost tracker: move Span button into the Name cell (always visible)"
+        },
+        {
+          "hash": "eb2e4da",
+          "date": "2026-06-04",
+          "subject": "Cost tracker: line span fill (Approach A \u2014 visible picking mode)"
+        },
+        {
+          "hash": "42d7685",
+          "date": "2026-06-04",
+          "subject": "Cost tracker: column fill \u2014 click a day header to set the whole column"
+        }
+      ],
+      "repo": {
+        "path": "/home/sdoucet/projects/PM_Auto",
+        "name": "PM_Auto",
+        "exists": true
+      },
       "graph": {
         "name": "PM_Auto",
         "html": "_graphs/PM_Auto/graphify-out/graph.html",
@@ -124,12 +330,40 @@
         {
           "subArea": null,
           "state": "Slice B \u2014 PM notes: per-project PM notes (schema \u2192 form \u2192 display). Plan locked, spec handed off; on Commit 1 (Dataverse schema migration).",
+          "focusItems": [
+            "Slice B \u2014 PM notes: per-project PM notes (schema \u2192 form \u2192 display). Plan locked, spec handed off; on Commit 1 (Dataverse schema migration)."
+          ],
           "next": "Board view for the projects list (depends on Slice B; filter-to-expand behavior captured)",
+          "nextItems": [
+            {
+              "done": false,
+              "text": "Board view for the projects list (depends on Slice B; filter-to-expand behavior captured)"
+            },
+            {
+              "done": false,
+              "text": "Flow track \u2014 F1 departure auto-flip \u00b7 F2 3-day QC reminder"
+            },
+            {
+              "done": false,
+              "text": "Slice D \u2014 XML renumber 99\u2192real job # on import"
+            },
+            {
+              "done": false,
+              "text": "\"Generating\u2026\" indicator for cost-tracker + tripsheet (HTMX hx-indicator + disable; ~30s Excel-COM run)"
+            }
+          ],
           "blocked": false,
-          "blockedText": null,
+          "blockedItems": [],
           "parked": false,
+          "parkedItems": [],
+          "counts": {
+            "inFlight": 1,
+            "next": 4,
+            "blocked": 0,
+            "parked": 0
+          },
           "lastUpdated": "2026-06-17T07:33:30",
-          "ageDays": 0.0,
+          "ageDays": 0.1,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -155,6 +389,12 @@
         "next": "auth.users DELETE trigger + populate firstName/lastName for OAuth users (the trigger-cleanup sprint)",
         "freshness": "green",
         "reason": "parked"
+      },
+      "counts": {
+        "inFlight": 3,
+        "next": 10,
+        "blocked": 0,
+        "parked": 1
       },
       "subAreaTally": [
         {
@@ -185,9 +425,76 @@
         0,
         0,
         0,
-        18,
-        3
+        0,
+        0
       ],
+      "momentum": {
+        "bars": [
+          18,
+          0,
+          8,
+          16,
+          6,
+          0,
+          5,
+          3,
+          0,
+          3,
+          0,
+          0,
+          6,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total": 67,
+        "state": "cooling",
+        "word": "cooling",
+        "days": 21,
+        "source": "git"
+      },
+      "recentCommits": [
+        {
+          "hash": "f1615184",
+          "date": "2026-06-11",
+          "subject": "Search engine shutoff pre-launch \u2014 robots.ts Disallow: / for all agents, sitemap.ts returns empty, l"
+        },
+        {
+          "hash": "d07123fa",
+          "date": "2026-06-11",
+          "subject": "Invert foundry gate to deny-by-default in proxy.ts \u2014 no cookie => holding page (200 rewrite, no Loca"
+        },
+        {
+          "hash": "f586bc1c",
+          "date": "2026-06-09",
+          "subject": "Harden /api/uploads/customs/ per RECON \u00a711 \u2014 per-IP rate limit 20/10min on presigned+composite+score"
+        },
+        {
+          "hash": "63d26aec",
+          "date": "2026-06-09",
+          "subject": "RECON.md \u00a711: presigned-upload risk analysis \u2014 three /api/uploads/customs/ routes are unauthenticate"
+        },
+        {
+          "hash": "8ae4d9b7",
+          "date": "2026-06-09",
+          "subject": "Remove legacy checkout path \u2014 delete app/actions/checkout.ts (processCheckout), superseded by /api/p"
+        },
+        {
+          "hash": "76fbff20",
+          "date": "2026-06-09",
+          "subject": "Strip PII + payment data from server logs \u2014 drop customer email from signin/password-reset/update-pa"
+        }
+      ],
+      "repo": {
+        "path": "/home/sdoucet/projects/mad-custom-tx-master",
+        "name": "mad-custom-tx-master",
+        "exists": true
+      },
       "graph": {
         "name": "mad-custom-tx",
         "html": "_graphs/mad-custom-tx/graphify-out/graph.html",
@@ -202,13 +509,43 @@
       "subAreas": [
         {
           "subArea": "_shared",
-          "state": "Google OAuth Brand Verification (FREE, pre-launch must-do): submit the OAuth consent-screen branding so Google sign-in shows the verified app, not the raw Supab",
+          "state": "Google OAuth Brand Verification (FREE, pre-launch must-do): submit the OAuth consent-screen branding so Google sign-in shows the verified app, not the raw Supabase URL.",
+          "focusItems": [
+            "Google OAuth Brand Verification (FREE, pre-launch must-do): submit the OAuth consent-screen branding so Google sign-in shows the verified app, not the raw Supabase URL."
+          ],
           "next": "auth.users DELETE trigger + populate firstName/lastName for OAuth users (the trigger-cleanup sprint)",
+          "nextItems": [
+            {
+              "done": false,
+              "text": "auth.users DELETE trigger + populate firstName/lastName for OAuth users (the trigger-cleanup sprint)"
+            },
+            {
+              "done": false,
+              "text": "Centralize admin auth \u2014 retire the inline app/admin/layout.tsx check, use requireAdmin() everywhere (two codepaths today)"
+            },
+            {
+              "done": false,
+              "text": "Supabase custom domain (~$35/mo, optional) + Resend Pro (2nd sender domain, when customs traffic justifies)"
+            },
+            {
+              "done": false,
+              "text": "Passkeys / WebAuthn (Phase 2)"
+            }
+          ],
           "blocked": false,
-          "blockedText": null,
+          "blockedItems": [],
           "parked": true,
+          "parkedItems": [
+            "Committed Chattanooga FTP credentials in lib/r2.ts \u2014 rotate + git-history scrub (separate remediation task; not actioned)."
+          ],
+          "counts": {
+            "inFlight": 1,
+            "next": 4,
+            "blocked": 0,
+            "parked": 1
+          },
           "lastUpdated": "2026-06-17T07:34:31",
-          "ageDays": 0.0,
+          "ageDays": 0.1,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -222,13 +559,37 @@
         },
         {
           "subArea": "armory",
-          "state": "\u26d4 Pre-Launch Compliance Audit (TOP PRIORITY \u2014 blocks launch): federal + state firearms + age-gating legal review. Restricted-states coverage is rules-based toda",
+          "state": "\u26d4 Pre-Launch Compliance Audit (TOP PRIORITY \u2014 blocks launch): federal + state firearms + age-gating legal review. Restricted-states coverage is rules-based today, not lawyer-verified.",
+          "focusItems": [
+            "\u26d4 Pre-Launch Compliance Audit (TOP PRIORITY \u2014 blocks launch): federal + state firearms + age-gating legal review. Restricted-states coverage is rules-based today, not lawyer-verified."
+          ],
           "next": "Validate FFL license_expiry at checkout (can currently charge a transfer on an expired FFL)",
+          "nextItems": [
+            {
+              "done": false,
+              "text": "Validate FFL license_expiry at checkout (can currently charge a transfer on an expired FFL)"
+            },
+            {
+              "done": false,
+              "text": "Complete the restricted-states coverage audit (rules-based \u2192 verify against legal requirements)"
+            },
+            {
+              "done": false,
+              "text": "Classify firearms off tier1==='firearms', not the isFirearm convenience bool (drift risk)"
+            }
+          ],
           "blocked": false,
-          "blockedText": null,
+          "blockedItems": [],
           "parked": false,
+          "parkedItems": [],
+          "counts": {
+            "inFlight": 1,
+            "next": 3,
+            "blocked": 0,
+            "parked": 0
+          },
           "lastUpdated": "2026-06-17T07:34:19",
-          "ageDays": 0.0,
+          "ageDays": 0.1,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -242,13 +603,37 @@
         },
         {
           "subArea": "customs",
-          "state": "Configurator visual calibration: the 2 seeded MockupTemplates (LTM7216, GFT220) have baked-in sample engravings + wrong reference dims (1024 vs actual 1800\u00b2) \u2014 ",
+          "state": "Configurator visual calibration: the 2 seeded MockupTemplates (LTM7216, GFT220) have baked-in sample engravings + wrong reference dims (1024 vs actual 1800\u00b2) \u2014 source true blanks, recalibrate the engr",
+          "focusItems": [
+            "Configurator visual calibration: the 2 seeded MockupTemplates (LTM7216, GFT220) have baked-in sample engravings + wrong reference dims (1024 vs actual 1800\u00b2) \u2014 source true blanks, recalibrate the engr"
+          ],
           "next": "Admin-configurable customs shipping rate (flat $14.95 hardcoded today; deferred to the customs-admin build)",
+          "nextItems": [
+            {
+              "done": false,
+              "text": "Admin-configurable customs shipping rate (flat $14.95 hardcoded today; deferred to the customs-admin build)"
+            },
+            {
+              "done": false,
+              "text": "Wire Collections into storefront discovery (/boutique/collections[/slug] pages not built)"
+            },
+            {
+              "done": false,
+              "text": "Customs account portal + welcome-email CTA destination"
+            }
+          ],
           "blocked": false,
-          "blockedText": null,
+          "blockedItems": [],
           "parked": false,
+          "parkedItems": [],
+          "counts": {
+            "inFlight": 1,
+            "next": 3,
+            "blocked": 0,
+            "parked": 0
+          },
           "lastUpdated": "2026-06-17T07:34:14",
-          "ageDays": 0.0,
+          "ageDays": 0.1,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -275,6 +660,12 @@
         "freshness": "green",
         "reason": "most recent"
       },
+      "counts": {
+        "inFlight": 0,
+        "next": 0,
+        "blocked": 0,
+        "parked": 0
+      },
       "subAreaTally": [
         {
           "subArea": "(flat)",
@@ -296,19 +687,60 @@
         0,
         0,
         0,
-        6,
+        0,
         0
       ],
+      "momentum": {
+        "bars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total": 0,
+        "state": "idle",
+        "word": "idle",
+        "days": 21,
+        "source": "none"
+      },
+      "recentCommits": [],
+      "repo": null,
       "graph": null,
       "backlog": null,
       "subAreas": [
         {
           "subArea": null,
           "state": null,
+          "focusItems": [],
           "next": null,
+          "nextItems": [],
           "blocked": false,
-          "blockedText": null,
+          "blockedItems": [],
           "parked": false,
+          "parkedItems": [],
+          "counts": {
+            "inFlight": 0,
+            "next": 0,
+            "blocked": 0,
+            "parked": 0
+          },
           "lastUpdated": "2026-06-16T13:35:56",
           "ageDays": 0.8,
           "freshness": "green",
@@ -336,6 +768,12 @@
         "next": "Clan-permissions page (clan-scoped permission mgmt; folds in the admin entry-guard role separation)",
         "freshness": "green",
         "reason": "parked"
+      },
+      "counts": {
+        "inFlight": 1,
+        "next": 5,
+        "blocked": 0,
+        "parked": 1
       },
       "subAreaTally": [
         {
@@ -370,9 +808,76 @@
         0,
         0,
         0,
-        25,
-        1
+        0,
+        0
       ],
+      "momentum": {
+        "bars": [
+          2,
+          9,
+          12,
+          3,
+          0,
+          0,
+          3,
+          3,
+          0,
+          46,
+          65,
+          26,
+          23,
+          0,
+          0,
+          0,
+          2,
+          9,
+          5,
+          2,
+          0
+        ],
+        "total": 210,
+        "state": "hot",
+        "word": "hot",
+        "days": 21,
+        "source": "git"
+      },
+      "recentCommits": [
+        {
+          "hash": "49a47d0",
+          "date": "2026-06-16",
+          "subject": "pipeline(2c): harden the four model-output parse boundaries in intelligence.ts (defensive parsing)"
+        },
+        {
+          "hash": "3c2ee34",
+          "date": "2026-06-16",
+          "subject": "pipeline(2b): migrate processDiscordImage write onto shared core + fix 3 bugs on-migrate"
+        },
+        {
+          "hash": "6c5669c",
+          "date": "2026-06-15",
+          "subject": "pipeline(2a): migrate processScreenshotWithAI write onto shared core + fix 3 bugs on-migrate"
+        },
+        {
+          "hash": "4ce0015",
+          "date": "2026-06-15",
+          "subject": "pipeline(1d): apply the four ruled behavior fixes to the shared core + callers"
+        },
+        {
+          "hash": "e632415",
+          "date": "2026-06-15",
+          "subject": "pipeline(1c): migrate batches.ts commitAiBatch onto shared resolveNorm/buildScoreUpsertOp (no behavi"
+        },
+        {
+          "hash": "7d41b4a",
+          "date": "2026-06-15",
+          "subject": "pipeline(1b): migrate scores.ts write paths onto shared writeScore/resolveNorm (no behavior change)"
+        }
+      ],
+      "repo": {
+        "path": "/home/sdoucet/projects/zus-legacy/nextjs-boilerplate",
+        "name": "nextjs-boilerplate",
+        "exists": true
+      },
       "graph": {
         "name": "zus-legacy",
         "html": "_graphs/zus-legacy/graphify-out/graph.html",
@@ -388,12 +893,21 @@
         {
           "subArea": "_shared",
           "state": null,
+          "focusItems": [],
           "next": null,
+          "nextItems": [],
           "blocked": false,
-          "blockedText": null,
+          "blockedItems": [],
           "parked": false,
+          "parkedItems": [],
+          "counts": {
+            "inFlight": 0,
+            "next": 0,
+            "blocked": 0,
+            "parked": 0
+          },
           "lastUpdated": "2026-06-16T19:18:57",
-          "ageDays": 0.5,
+          "ageDays": 0.6,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -408,12 +922,26 @@
         {
           "subArea": "app",
           "state": null,
+          "focusItems": [],
           "next": null,
+          "nextItems": [
+            {
+              "done": true,
+              "text": "Populate knowledge/ from the ground-truth recon pass (zus-legacy-companion repo). _(done 2026-06-16)_"
+            }
+          ],
           "blocked": false,
-          "blockedText": null,
+          "blockedItems": [],
           "parked": false,
+          "parkedItems": [],
+          "counts": {
+            "inFlight": 0,
+            "next": 0,
+            "blocked": 0,
+            "parked": 0
+          },
           "lastUpdated": "2026-06-16T19:18:29",
-          "ageDays": 0.5,
+          "ageDays": 0.6,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -428,12 +956,30 @@
         {
           "subArea": "intel",
           "state": null,
+          "focusItems": [],
           "next": "(watch) decode_rubens2.py:188 writes tag not clanId \u2014 use decode_roster.py for roster TSVs.",
+          "nextItems": [
+            {
+              "done": true,
+              "text": "Populate knowledge/ from the ground-truth recon pass (~/projects/mitmproxy +"
+            },
+            {
+              "done": false,
+              "text": "(watch) decode_rubens2.py:188 writes tag not clanId \u2014 use decode_roster.py for roster TSVs."
+            }
+          ],
           "blocked": false,
-          "blockedText": null,
+          "blockedItems": [],
           "parked": false,
+          "parkedItems": [],
+          "counts": {
+            "inFlight": 0,
+            "next": 1,
+            "blocked": 0,
+            "parked": 0
+          },
           "lastUpdated": "2026-06-16T19:16:34",
-          "ageDays": 0.5,
+          "ageDays": 0.6,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -447,13 +993,43 @@
         },
         {
           "subArea": "web",
-          "state": "Site-role token bug (FIX NEXT \u2014 live post-cutover): the switchboard mints role = clan role, but the /admin middleware gate expects a site role \u2192 a site super-ad",
+          "state": "Site-role token bug (FIX NEXT \u2014 live post-cutover): the switchboard mints role = clan role, but the /admin middleware gate expects a site role \u2192 a site super-admin who is only a member in the switched",
+          "focusItems": [
+            "Site-role token bug (FIX NEXT \u2014 live post-cutover): the switchboard mints role = clan role, but the /admin middleware gate expects a site role \u2192 a site super-admin who is only a member in the switched"
+          ],
           "next": "Clan-permissions page (clan-scoped permission mgmt; folds in the admin entry-guard role separation)",
+          "nextItems": [
+            {
+              "done": false,
+              "text": "Clan-permissions page (clan-scoped permission mgmt; folds in the admin entry-guard role separation)"
+            },
+            {
+              "done": false,
+              "text": "Player name-history (track renames for identity continuity; pairs with re-admission)"
+            },
+            {
+              "done": false,
+              "text": "Player-facing rebuild (user-vs-player profile split + \"Gemini cringe\" label redo)"
+            },
+            {
+              "done": false,
+              "text": "Capital-rotation full live test + the CREATE_CAPITAL gate question"
+            }
+          ],
           "blocked": false,
-          "blockedText": null,
+          "blockedItems": [],
           "parked": true,
+          "parkedItems": [
+            "Committed .env with live prod secrets (Mongo / Gemini / JWT) \u2014 rotate + git-history scrub (separate remediation task; not actioned)."
+          ],
+          "counts": {
+            "inFlight": 1,
+            "next": 4,
+            "blocked": 0,
+            "parked": 1
+          },
           "lastUpdated": "2026-06-17T07:34:25",
-          "ageDays": 0.0,
+          "ageDays": 0.1,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -480,13 +1056,19 @@
         "freshness": "green",
         "reason": "most recent"
       },
+      "counts": {
+        "inFlight": 0,
+        "next": 0,
+        "blocked": 0,
+        "parked": 0
+      },
       "subAreaTally": [
         {
           "subArea": "(flat)",
           "status": "green"
         }
       ],
-      "lastUpdated": "2026-06-17T07:38:05",
+      "lastUpdated": "2026-06-17T09:15:09",
       "freshness": "green",
       "rhythm": [
         0,
@@ -501,20 +1083,61 @@
         0,
         0,
         0,
-        3,
-        4
+        0,
+        0
       ],
+      "momentum": {
+        "bars": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "total": 0,
+        "state": "idle",
+        "word": "idle",
+        "days": 21,
+        "source": "none"
+      },
+      "recentCommits": [],
+      "repo": null,
       "graph": null,
       "backlog": null,
       "subAreas": [
         {
           "subArea": null,
           "state": null,
+          "focusItems": [],
           "next": null,
+          "nextItems": [],
           "blocked": false,
-          "blockedText": null,
+          "blockedItems": [],
           "parked": false,
-          "lastUpdated": "2026-06-17T07:38:05",
+          "parkedItems": [],
+          "counts": {
+            "inFlight": 0,
+            "next": 0,
+            "blocked": 0,
+            "parked": 0
+          },
+          "lastUpdated": "2026-06-17T09:15:09",
           "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 0,
