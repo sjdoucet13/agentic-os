@@ -11,7 +11,7 @@
 - [ ] Complete the restricted-states coverage audit (rules-based → verify against legal requirements)
 - [ ] Classify firearms off `tier1==='firearms'`, not the `isFirearm` convenience bool (drift risk)
 
-_Done per commits: admin-API auth gating (`c04f7548`, all routes `requireAdmin()`). Full backlog in `mad-custom-tx/BACKLOG.md`._
+_Done per commits: the shared pre-launch lockdown now gates the foundry storefront too — deny-by-default holding page + search-engine shutoff (`d07123fa`, `f1615184`). Earlier: admin-API auth gating (`c04f7548`, all routes `requireAdmin()`). Full backlog in `mad-custom-tx/BACKLOG.md`._
 
 ## Blocked
 - _(none)_

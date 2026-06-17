@@ -11,7 +11,7 @@
 - [ ] Wire Collections into storefront discovery (`/boutique/collections[/slug]` pages not built)
 - [ ] Customs account portal + welcome-email CTA destination
 
-_Done per commits: shipping display/charge mismatch closed (`eef414cf`) — only the admin-rate half remains. Full backlog in `mad-custom-tx/BACKLOG.md`._
+_Done per commits: `/api/uploads/customs/*` hardened — per-IP rate-limit + Sharp pixel guard, PDF dropped from presign (`f586bc1c`); presigned-upload risk mapped (RECON §11, `63d26aec`). Earlier: shipping display/charge mismatch closed (`eef414cf`) — admin-rate half still open (see Next). Full backlog in `mad-custom-tx/BACKLOG.md`._
 
 ## Blocked
 - _(none)_

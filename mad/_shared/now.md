@@ -12,6 +12,8 @@
 - [ ] Supabase custom domain (~$35/mo, optional) + Resend Pro (2nd sender domain, when customs traffic justifies)
 - [ ] Passkeys / WebAuthn (Phase 2)
 
+_Done per commits: pre-launch lockdown sweep (Jun 9–11) — search-engine shutoff behind `PRE_LAUNCH_LOCKDOWN` (`f1615184`), foundry gate inverted to deny-by-default + `/holding` page (`d07123fa`), legacy checkout path removed (`8ae4d9b7`), PII/payment data stripped from server logs (`76fbff20`), `/api/quote` rate-limited (`ab9f3bc3`). Full backlog in `mad-custom-tx/BACKLOG.md`._
+
 ## Blocked
 - _(none)_
 
