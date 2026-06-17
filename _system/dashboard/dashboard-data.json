@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
   "version": "v4-missioncontrol",
-  "generatedAt": "2026-06-17T09:38:40",
+  "generatedAt": "2026-06-17T10:24:13",
   "vaultPath": "/mnt/c/Users/sdouc/projects/agentic-os",
   "obsidianVaultPath": "\\\\wsl.localhost\\Ubuntu\\home\\sdoucet\\projects\\agentic-os",
   "freshnessThresholds": {
@@ -13,8 +13,9 @@
   "telemetry": {
     "agentState": "IDLE",
     "running": 0,
-    "lastSweptIso": "2026-06-17T09:37:31",
-    "lastSweptHours": 0.0,
+    "sweptSource": "git",
+    "lastSweptIso": "2026-06-17T09:38:51",
+    "lastSweptHours": 0.8,
     "activeProjects": 3,
     "codeGraphs": 3,
     "flags": 2,
@@ -191,7 +192,7 @@
             "parked": 0
           },
           "lastUpdated": "2026-06-16T13:34:16",
-          "ageDays": 0.8,
+          "ageDays": 0.9,
           "freshness": "green",
           "knowledgeFiles": 0,
           "knowledgePopulated": 0,
@@ -742,7 +743,7 @@
             "parked": 0
           },
           "lastUpdated": "2026-06-16T13:35:56",
-          "ageDays": 0.8,
+          "ageDays": 0.9,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 0,
@@ -1068,7 +1069,7 @@
           "status": "green"
         }
       ],
-      "lastUpdated": "2026-06-17T09:37:29",
+      "lastUpdated": "2026-06-17T10:23:55",
       "freshness": "green",
       "rhythm": [
         0,
@@ -1137,7 +1138,7 @@
             "blocked": 0,
             "parked": 0
           },
-          "lastUpdated": "2026-06-17T09:37:29",
+          "lastUpdated": "2026-06-17T10:23:55",
           "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 0,

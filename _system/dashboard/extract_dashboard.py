@@ -210,6 +210,18 @@ def recent_commits(repo, n=6):
     return out
 
 
+def git_last_commit_ts(repo):
+    """Unix timestamp of the repo's most-recent commit (read-only). 0.0 if none/not a repo.
+    'last swept' uses GIT COMMIT TIME, not mtime: mtime resets on checkout / NTFS access,
+    so an mtime-based 'last swept' read ~0h constantly (always "just now"). The vault's last
+    commit is the honest answer to "when did the agent last meaningfully touch the vault?"."""
+    out = _git(repo, ["log", "-1", "--format=%ct"])
+    try:
+        return float(out[0].strip()) if out else 0.0
+    except (ValueError, IndexError):
+        return 0.0
+
+
 # --- scanners ---------------------------------------------------------------
 def scan_sub_area(domain, sub, path):
     now = parse_now(path / "now.md")
@@ -356,8 +368,9 @@ def build_telemetry(domains):
     open_items = sum(d["counts"]["next"] for d in domains)
     code_graphs = sum(1 for d in domains if d.get("graph") and d["graph"]["exists"])
     active = sum(1 for d in domains if d["kind"] == "knowledge" and d.get("repo") and d["repo"]["exists"])
-    swept = newest_mtime(VAULT)
+    swept = git_last_commit_ts(str(VAULT)) or newest_mtime(VAULT)   # git commit time, not mtime
     return {"agentState": "IDLE", "running": 0,
+            "sweptSource": "git" if git_last_commit_ts(str(VAULT)) else "mtime",
             "lastSweptIso": iso(swept),
             "lastSweptHours": round(age_days(swept) * 24, 1) if swept else None,
             "activeProjects": active, "codeGraphs": code_graphs,
@@ -452,14 +465,19 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
     border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:11px 18px;backdrop-filter:blur(6px)}
   .logo{font-family:var(--display);font-size:26px;letter-spacing:1.5px;cursor:pointer;white-space:nowrap;line-height:1}
   .logo b{color:var(--accent)} .logo:hover{filter:brightness(1.15)}
+  /* command bar is honest-disabled (phase 1.5): no backend on a static file:// page, so the
+     palette + CAPTURE/REPORT/FOCUS are deliberately inert — dimmed, not-allowed, no fake live caret. */
   .prompt{flex:1;min-width:120px;display:flex;align-items:center;gap:8px;background:#0b0f14;
-    border:1px solid var(--line);border-radius:6px;padding:8px 12px;color:var(--muted);font-family:var(--mono);font-size:12.5px}
-  .prompt .pk{color:var(--accent-dim)} .prompt .cur{width:7px;height:15px;background:var(--accent);
-    display:inline-block;animation:blink 1.1s steps(1) infinite;opacity:var(--mo)}
-  @keyframes blink{50%{opacity:0}}
+    border:1px dashed var(--line);border-radius:6px;padding:8px 12px;color:var(--dim);font-family:var(--mono);font-size:12.5px;
+    cursor:not-allowed;opacity:.6;user-select:none}
+  .prompt .pk{color:var(--dim)}
+  .p3{font-family:var(--mono);font-size:8px;letter-spacing:1px;text-transform:uppercase;color:var(--dim);
+    border:1px solid var(--line);border-radius:3px;padding:2px 5px;margin-left:auto;white-space:nowrap}
+  .cmdgrp{display:flex;align-items:center;gap:8px}
   .qbtn{font-family:var(--display);letter-spacing:1px;font-size:14px;padding:7px 12px;border-radius:5px;
-    border:1px solid var(--line2);background:var(--panel);color:var(--muted);cursor:not-allowed;position:relative}
-  .qbtn .ph{position:absolute;bottom:-14px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:7px;color:var(--dim)}
+    border:1px solid var(--line);background:var(--panel);color:var(--dim);cursor:not-allowed;opacity:.5;user-select:none}
+  .cmdnote{font-family:var(--mono);font-size:8.5px;letter-spacing:1px;text-transform:uppercase;color:var(--dim);
+    border:1px dashed var(--line);border-radius:4px;padding:4px 8px;white-space:nowrap}
   .motionbtn{font-family:var(--mono);font-size:10px;color:var(--dim);border:1px solid var(--line);
     border-radius:5px;padding:7px 9px;background:var(--steel);cursor:pointer;white-space:nowrap}
   .motionbtn:hover{color:var(--accent-dim);border-color:var(--line2)}
@@ -555,6 +573,8 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   .meta:hover{opacity:1;border-color:var(--line2)}
   .meta .mn{font-family:var(--display);font-size:18px;letter-spacing:1px;color:var(--muted)}
   .meta .md{font-family:var(--mono);font-size:9.5px;color:var(--dim);margin-left:auto}
+  .meta.static{cursor:default}
+  .meta.static:hover{opacity:.8;border-color:var(--line)}
 
   #drill{display:none}
   .back{font-family:var(--mono);font-size:11px;color:var(--accent-dim);cursor:pointer;display:inline-flex;gap:7px;
@@ -588,10 +608,14 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
 <body data-motion="on">
 <div class="cmdbar">
   <div class="logo" onclick="goHome()">AGENTIC<b>·</b>OS</div>
-  <div class="prompt"><span class="pk">⌘</span> what do you want to do <span class="cur"></span></div>
-  <span class="qbtn">CAPTURE<span class="ph">phase 3</span></span>
-  <span class="qbtn">REPORT<span class="ph">phase 3</span></span>
-  <span class="qbtn">FOCUS<span class="ph">phase 3</span></span>
+  <div class="prompt" aria-disabled="true" title="phase 3 — a static file:// page has no backend; regenerate via the CLI">
+    <span class="pk">⌘</span> <span>command palette — not wired yet</span> <span class="p3">phase 3</span></div>
+  <span class="cmdgrp">
+    <span class="qbtn" aria-disabled="true" title="phase 3 · needs local server">CAPTURE</span>
+    <span class="qbtn" aria-disabled="true" title="phase 3 · needs local server">REPORT</span>
+    <span class="qbtn" aria-disabled="true" title="phase 3 · needs local server">FOCUS</span>
+    <span class="cmdnote">phase 3 · needs local server</span>
+  </span>
   <span class="motionbtn" id="mobtn" onclick="toggleMotion()">◉ motion</span>
 </div>
 
@@ -724,7 +748,7 @@ function renderGrid(){
   document.getElementById('metarow').innerHTML = m.map(d=>
     `<div class="meta" onclick="enter('${d.domain}')"><span class="mn">${esc(d.domain)}</span>
        <span class="md">${esc(d.title)} · ${d.subAreas.length} area${d.subAreas.length!==1?'s':''}</span></div>`).join('')
-    + `<div class="meta"><span class="mn">dashboard</span><span class="md">this surface · phase 1 · v4</span></div>`;
+    + `<div class="meta static" title="this dashboard — generated, no detail page"><span class="mn">dashboard</span><span class="md">this surface · phase 1 · v4</span></div>`;
 }
 
 function subCard(sa){
