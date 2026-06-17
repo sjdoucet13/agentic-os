@@ -488,7 +488,12 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
   @keyframes beat{50%{transform:scale(1.5);filter:brightness(1.4)}}
   select.gsel{font-family:var(--mono);font-size:11px;background:#0b0f14;color:var(--accent-dim);
     border:1px solid var(--line2);border-radius:5px;padding:5px 8px;cursor:pointer}
-  .gframe{width:100%;height:430px;border:0;background:#0a0d11;display:block}
+  #graphhost{position:relative;overflow:hidden;width:100%;background:#0a0d11}
+  .gframe{height:430px;border:0;background:#0a0d11;display:block}
+  .sbtoggle{font-family:var(--mono);font-size:10px;color:var(--accent-dim);border:1px solid var(--line2);
+    border-radius:5px;padding:5px 9px;cursor:pointer;white-space:nowrap}
+  .sbtoggle:hover{border-color:var(--accent-dim);color:var(--accent)}
+  .ghead-r{display:flex;gap:8px;align-items:center}
   .gmiss{height:430px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
     color:var(--muted);font-family:var(--mono);font-size:12px;text-align:center;padding:20px}
   .gmiss code{color:var(--accent-dim)}
@@ -597,7 +602,10 @@ HTML_TEMPLATE = r"""<!DOCTYPE html>
       <div class="pnl">
         <div class="pnl-h">
           <div class="t"><span class="live"></span> CODE-GRAPH</div>
-          <select class="gsel" id="gsel" onchange="swapGraph(this.value)"></select>
+          <div class="ghead-r">
+            <span class="sbtoggle" id="sbtoggle" onclick="toggleSidebar()" title="show search / node-info / communities">‹ panel</span>
+            <select class="gsel" id="gsel" onchange="swapGraph(this.value)"></select>
+          </div>
         </div>
         <div id="graphhost"></div>
       </div>
@@ -653,12 +661,25 @@ function renderGraph(){
   sel.innerHTML = gp.projects.map(p=>`<option value="${p.domain}">${esc(p.label)}${p.exists?'':' · not generated'}</option>`).join('');
   swapGraph(gp.default || gp.projects[0].domain);
 }
+let sidebarOpen=false;  /* default COLLAPSED: graph maximized; graphify's 280px side panel (search/node-info/communities) is clipped */
+function toggleSidebar(){
+  sidebarOpen=!sidebarOpen;
+  const b=document.getElementById('sbtoggle');
+  b.textContent=sidebarOpen?'panel ›':'‹ panel';
+  b.title=sidebarOpen?'hide search / node-info / communities (maximize graph)':'show search / node-info / communities';
+  const cur=document.getElementById('gsel').value;
+  if(cur) swapGraph(cur);   /* reload the iframe at the new width so graphify re-fits its layout (it has no resize handler) */
+}
 function swapGraph(domain){
   const gp=DATA.graphPanel, p=gp.projects.find(x=>x.domain===domain);
   const host=document.getElementById('graphhost');
   document.getElementById('gsel').value=domain;
-  if(p && p.exists){ host.innerHTML=`<iframe class="gframe" src="${esc(p.src)}" title="${esc(p.label)} code-graph" loading="lazy"></iframe>`; }
-  else { host.innerHTML=`<div class="gmiss">graph not generated for <b>${esc(p?p.label:domain)}</b><br>run <code>graphify extract &lt;repo&gt;</code> then re-run the dashboard extractor</div>`; }
+  if(p && p.exists){
+    /* collapsed: over-size the iframe by graphify's 280px #sidebar (+border) and let #graphhost{overflow:hidden} clip it
+       off the right — the graph (#graph{flex:1}) then fills the freed width. expanded: iframe = host width, sidebar shows. */
+    const w = sidebarOpen ? '100%' : 'calc(100% + 282px)';
+    host.innerHTML=`<iframe class="gframe" style="width:${w}" src="${esc(p.src)}" title="${esc(p.label)} code-graph" loading="lazy"></iframe>`;
+  } else { host.innerHTML=`<div class="gmiss">graph not generated for <b>${esc(p?p.label:domain)}</b><br>run <code>graphify extract &lt;repo&gt;</code> then re-run the dashboard extractor</div>`; }
 }
 
 function renderUrgent(){
