@@ -4,10 +4,14 @@
 > Do NOT pull in armory regulatory knowledge.
 
 ## Current focus
-- _(none set — skeleton)_
+- **Configurator visual calibration**: the 2 seeded MockupTemplates (LTM7216, GFT220) have baked-in sample engravings + wrong reference dims (1024 vs actual 1800²) — source true blanks, recalibrate the engraving-box coords, re-run the idempotent seed.
 
 ## Next actions
-- [x] Populate `knowledge/` from the ground-truth recon pass (mad-custom-tx repo). _(done 2026-06-16)_
+- [ ] Admin-configurable customs shipping rate (flat $14.95 hardcoded today; deferred to the customs-admin build)
+- [ ] Wire Collections into storefront discovery (`/boutique/collections[/slug]` pages not built)
+- [ ] Customs account portal + welcome-email CTA destination
+
+_Done per commits: shipping display/charge mismatch closed (`eef414cf`) — only the admin-rate half remains. Full backlog in `mad-custom-tx/BACKLOG.md`._
 
 ## Blocked
 - _(none)_

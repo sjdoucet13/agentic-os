@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-16T22:24:34",
+  "generatedAt": "2026-06-17T07:38:39",
   "vaultPath": "/mnt/c/Users/sdouc/projects/agentic-os",
   "obsidianVaultPath": "\\\\wsl.localhost\\Ubuntu\\home\\sdoucet\\projects\\agentic-os",
   "freshnessThresholds": {
@@ -13,7 +13,7 @@
     {
       "domain": "_ops",
       "kind": "meta",
-      "title": "ops \u2014 Router (Skills + Automations)",
+      "title": "_ops \u2014 Router (Skills + Automations)",
       "router": "_ops/CLAUDE.md",
       "health": "healthy",
       "healthStatus": "green",
@@ -44,10 +44,11 @@
         0,
         0,
         0,
-        0,
-        5
+        5,
+        0
       ],
       "graph": null,
+      "backlog": null,
       "subAreas": [
         {
           "subArea": null,
@@ -57,7 +58,7 @@
           "blockedText": null,
           "parked": false,
           "lastUpdated": "2026-06-16T13:34:16",
-          "ageDays": 0.4,
+          "ageDays": 0.8,
           "freshness": "green",
           "knowledgeFiles": 0,
           "knowledgePopulated": 0,
@@ -80,7 +81,7 @@
       "healthStatus": "green",
       "mostUrgent": {
         "subArea": null,
-        "next": null,
+        "next": "Board view for the projects list (depends on Slice B; filter-to-expand behavior captured)",
         "freshness": "green",
         "reason": "most recent"
       },
@@ -90,7 +91,7 @@
           "status": "green"
         }
       ],
-      "lastUpdated": "2026-06-16T19:03:38",
+      "lastUpdated": "2026-06-17T07:33:30",
       "freshness": "green",
       "rhythm": [
         0,
@@ -105,24 +106,30 @@
         0,
         0,
         0,
-        0,
-        8
+        7,
+        1
       ],
       "graph": {
         "name": "PM_Auto",
         "html": "_graphs/PM_Auto/graphify-out/graph.html",
         "exists": true
       },
+      "backlog": {
+        "path": "/home/sdoucet/projects/PM_Auto/BACKLOG.md",
+        "rel": "BACKLOG.md",
+        "exists": true,
+        "fileUrl": "file://wsl.localhost/Ubuntu/home/sdoucet/projects/PM_Auto/BACKLOG.md"
+      },
       "subAreas": [
         {
           "subArea": null,
-          "state": null,
-          "next": null,
+          "state": "Slice B \u2014 PM notes: per-project PM notes (schema \u2192 form \u2192 display). Plan locked, spec handed off; on Commit 1 (Dataverse schema migration).",
+          "next": "Board view for the projects list (depends on Slice B; filter-to-expand behavior captured)",
           "blocked": false,
           "blockedText": null,
           "parked": false,
-          "lastUpdated": "2026-06-16T19:03:38",
-          "ageDays": 0.1,
+          "lastUpdated": "2026-06-17T07:33:30",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -141,18 +148,18 @@
       "kind": "knowledge",
       "title": "mad \u2014 Domain Router (ONE domain, two sub-areas)",
       "router": "mad/CLAUDE.md",
-      "health": "healthy",
-      "healthStatus": "green",
+      "health": "attention",
+      "healthStatus": "amber",
       "mostUrgent": {
         "subArea": "_shared",
-        "next": null,
+        "next": "auth.users DELETE trigger + populate firstName/lastName for OAuth users (the trigger-cleanup sprint)",
         "freshness": "green",
-        "reason": "most recent"
+        "reason": "parked"
       },
       "subAreaTally": [
         {
           "subArea": "_shared",
-          "status": "green"
+          "status": "amber"
         },
         {
           "subArea": "armory",
@@ -163,7 +170,7 @@
           "status": "green"
         }
       ],
-      "lastUpdated": "2026-06-16T19:10:53",
+      "lastUpdated": "2026-06-17T07:34:31",
       "freshness": "green",
       "rhythm": [
         0,
@@ -178,44 +185,50 @@
         0,
         0,
         0,
-        0,
-        20
+        18,
+        3
       ],
       "graph": {
         "name": "mad-custom-tx",
         "html": "_graphs/mad-custom-tx/graphify-out/graph.html",
         "exists": true
       },
+      "backlog": {
+        "path": "/home/sdoucet/projects/mad-custom-tx-master/BACKLOG.md",
+        "rel": "BACKLOG.md",
+        "exists": true,
+        "fileUrl": "file://wsl.localhost/Ubuntu/home/sdoucet/projects/mad-custom-tx-master/BACKLOG.md"
+      },
       "subAreas": [
         {
           "subArea": "_shared",
-          "state": null,
-          "next": null,
+          "state": "Google OAuth Brand Verification (FREE, pre-launch must-do): submit the OAuth consent-screen branding so Google sign-in shows the verified app, not the raw Supab",
+          "next": "auth.users DELETE trigger + populate firstName/lastName for OAuth users (the trigger-cleanup sprint)",
           "blocked": false,
           "blockedText": null,
-          "parked": false,
-          "lastUpdated": "2026-06-16T19:08:28",
-          "ageDays": 0.1,
+          "parked": true,
+          "lastUpdated": "2026-06-17T07:34:31",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
-          "hasNow": false,
+          "hasNow": true,
           "hasSkills": false,
           "paths": {
             "dir": "mad/_shared",
-            "now": null,
+            "now": "mad/_shared/now.md",
             "knowledge": "mad/_shared/knowledge"
           }
         },
         {
           "subArea": "armory",
-          "state": null,
-          "next": null,
+          "state": "\u26d4 Pre-Launch Compliance Audit (TOP PRIORITY \u2014 blocks launch): federal + state firearms + age-gating legal review. Restricted-states coverage is rules-based toda",
+          "next": "Validate FFL license_expiry at checkout (can currently charge a transfer on an expired FFL)",
           "blocked": false,
           "blockedText": null,
           "parked": false,
-          "lastUpdated": "2026-06-16T19:10:53",
-          "ageDays": 0.1,
+          "lastUpdated": "2026-06-17T07:34:19",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -229,13 +242,13 @@
         },
         {
           "subArea": "customs",
-          "state": null,
-          "next": null,
+          "state": "Configurator visual calibration: the 2 seeded MockupTemplates (LTM7216, GFT220) have baked-in sample engravings + wrong reference dims (1024 vs actual 1800\u00b2) \u2014 ",
+          "next": "Admin-configurable customs shipping rate (flat $14.95 hardcoded today; deferred to the customs-admin build)",
           "blocked": false,
           "blockedText": null,
           "parked": false,
-          "lastUpdated": "2026-06-16T19:09:42",
-          "ageDays": 0.1,
+          "lastUpdated": "2026-06-17T07:34:14",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -283,10 +296,11 @@
         0,
         0,
         0,
-        0,
-        6
+        6,
+        0
       ],
       "graph": null,
+      "backlog": null,
       "subAreas": [
         {
           "subArea": null,
@@ -296,7 +310,7 @@
           "blockedText": null,
           "parked": false,
           "lastUpdated": "2026-06-16T13:35:56",
-          "ageDays": 0.4,
+          "ageDays": 0.8,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 0,
@@ -315,13 +329,13 @@
       "kind": "knowledge",
       "title": "zus \u2014 Domain Router (ONE domain, FOUR sub-areas)",
       "router": "zus/CLAUDE.md",
-      "health": "healthy",
-      "healthStatus": "green",
+      "health": "attention",
+      "healthStatus": "amber",
       "mostUrgent": {
-        "subArea": "_shared",
-        "next": null,
+        "subArea": "web",
+        "next": "Clan-permissions page (clan-scoped permission mgmt; folds in the admin entry-guard role separation)",
         "freshness": "green",
-        "reason": "most recent"
+        "reason": "parked"
       },
       "subAreaTally": [
         {
@@ -338,10 +352,10 @@
         },
         {
           "subArea": "web",
-          "status": "green"
+          "status": "amber"
         }
       ],
-      "lastUpdated": "2026-06-16T19:18:57",
+      "lastUpdated": "2026-06-17T07:34:25",
       "freshness": "green",
       "rhythm": [
         0,
@@ -356,13 +370,19 @@
         0,
         0,
         0,
-        0,
-        26
+        25,
+        1
       ],
       "graph": {
         "name": "zus-legacy",
         "html": "_graphs/zus-legacy/graphify-out/graph.html",
         "exists": true
+      },
+      "backlog": {
+        "path": "/home/sdoucet/projects/zus-legacy/nextjs-boilerplate/recon/PINNED_BACKLOG.md",
+        "rel": "recon/PINNED_BACKLOG.md",
+        "exists": true,
+        "fileUrl": "file://wsl.localhost/Ubuntu/home/sdoucet/projects/zus-legacy/nextjs-boilerplate/recon/PINNED_BACKLOG.md"
       },
       "subAreas": [
         {
@@ -373,7 +393,7 @@
           "blockedText": null,
           "parked": false,
           "lastUpdated": "2026-06-16T19:18:57",
-          "ageDays": 0.1,
+          "ageDays": 0.5,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -393,7 +413,7 @@
           "blockedText": null,
           "parked": false,
           "lastUpdated": "2026-06-16T19:18:29",
-          "ageDays": 0.1,
+          "ageDays": 0.5,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -408,12 +428,12 @@
         {
           "subArea": "intel",
           "state": null,
-          "next": "(watch) decoderubens2.py:188 writes tag not clanId \u2014 use decoderoster.py for roster TSVs.",
+          "next": "(watch) decode_rubens2.py:188 writes tag not clanId \u2014 use decode_roster.py for roster TSVs.",
           "blocked": false,
           "blockedText": null,
           "parked": false,
           "lastUpdated": "2026-06-16T19:16:34",
-          "ageDays": 0.1,
+          "ageDays": 0.5,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -427,13 +447,13 @@
         },
         {
           "subArea": "web",
-          "state": null,
-          "next": null,
+          "state": "Site-role token bug (FIX NEXT \u2014 live post-cutover): the switchboard mints role = clan role, but the /admin middleware gate expects a site role \u2192 a site super-ad",
+          "next": "Clan-permissions page (clan-scoped permission mgmt; folds in the admin entry-guard role separation)",
           "blocked": false,
           "blockedText": null,
-          "parked": false,
-          "lastUpdated": "2026-06-16T19:17:26",
-          "ageDays": 0.1,
+          "parked": true,
+          "lastUpdated": "2026-06-17T07:34:25",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -466,7 +486,7 @@
           "status": "green"
         }
       ],
-      "lastUpdated": "2026-06-16T22:22:45",
+      "lastUpdated": "2026-06-17T07:38:05",
       "freshness": "green",
       "rhythm": [
         0,
@@ -481,10 +501,11 @@
         0,
         0,
         0,
-        0,
-        5
+        3,
+        4
       ],
       "graph": null,
+      "backlog": null,
       "subAreas": [
         {
           "subArea": null,
@@ -493,7 +514,7 @@
           "blocked": false,
           "blockedText": null,
           "parked": false,
-          "lastUpdated": "2026-06-16T22:22:45",
+          "lastUpdated": "2026-06-17T07:38:05",
           "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 0,

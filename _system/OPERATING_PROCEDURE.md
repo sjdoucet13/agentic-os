@@ -60,6 +60,12 @@ stats are derived from how regularly these happen.
   actions. `now.md` is the answer to "if I only touch this domain once today, what?"
 - Keep focus **within** a domain. Cross-domain prioritization is a human decision, made
   explicitly — not encoded as links between domains.
+- **`now.md` is CC-owned state** (since 2026-06-17). Claude Code maintains it as a
+  byproduct of work: check items off as they complete, append new items on discovery, and
+  pull the next item up from the domain's authoritative `BACKLOG.md` when the focus item
+  closes. The backlog (in the repo) stays the reservoir; `now.md` is its **curated head** —
+  one current focus + a short ordered next-list (≈3–5), plus `## Blocked` / `## Parked` when
+  real. Humans **read** it; they don't hand-edit it (same rule as `_graphs/`).
 
 ---
 
@@ -68,7 +74,8 @@ stats are derived from how regularly these happen.
 - **Walls first.** When in doubt about where something goes, the answer is "ask," not
   "bridge." A contamination should be a visible, reportable event.
 - **Authored vs. generated.** Never hand-write into `_graphs/`. Never author into
-  `_system/state/`.
+  `_system/state/`. `now.md` is **CC-maintained** state — humans read it, Claude Code keeps
+  it current (see FOCUS); don't hand-edit it.
 - **Append, don't rewrite history.** Daily/log-style captures are append-only.
 - **Report honestly.** Done-and-verified is stated plainly; skipped or failed is stated
   just as plainly.

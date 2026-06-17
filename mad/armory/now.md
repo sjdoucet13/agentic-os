@@ -4,11 +4,14 @@
 > / NFA). Keep regulatory knowledge here only — never in customs, never in `_shared`.
 
 ## Current focus
-- _(none set — skeleton)_
+- ⛔ **Pre-Launch Compliance Audit** (TOP PRIORITY — blocks launch): federal + state firearms + age-gating legal review. Restricted-states coverage is rules-based today, not lawyer-verified.
 
 ## Next actions
-- [x] Populate `knowledge/` from the ground-truth recon pass (mad-custom-tx repo) — regulated
-      items kept in `armory/knowledge/`. _(done 2026-06-16)_
+- [ ] Validate FFL `license_expiry` at checkout (can currently charge a transfer on an expired FFL)
+- [ ] Complete the restricted-states coverage audit (rules-based → verify against legal requirements)
+- [ ] Classify firearms off `tier1==='firearms'`, not the `isFirearm` convenience bool (drift risk)
+
+_Done per commits: admin-API auth gating (`c04f7548`, all routes `requireAdmin()`). Full backlog in `mad-custom-tx/BACKLOG.md`._
 
 ## Blocked
 - _(none)_

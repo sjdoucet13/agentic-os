@@ -3,10 +3,15 @@
 > The FOCUS moment: the one thing for this domain right now. Keep it inside fugro.
 
 ## Current focus
-- _(none set — skeleton)_
+- **Slice B — PM notes**: per-project PM notes (schema → form → display). Plan locked, spec handed off; on Commit 1 (Dataverse schema migration).
 
 ## Next actions
-- [x] Populate `knowledge/` from the ground-truth recon pass (PM_Auto repo). _(done 2026-06-16)_
+- [ ] Board view for the projects list (depends on Slice B; filter-to-expand behavior captured)
+- [ ] Flow track — F1 departure auto-flip · F2 3-day QC reminder
+- [ ] Slice D — XML renumber 99→real job # on import
+- [ ] "Generating…" indicator for cost-tracker + tripsheet (HTMX `hx-indicator` + disable; ~30s Excel-COM run)
+
+_Full queue + the ★ OARS architecture session live in `PM_Auto/BACKLOG.md` + its CLAUDE.md "What's Next". Pinned: §9 auth migration → only at centralization / Graph email._
 
 ## Blocked
 - _(none)_

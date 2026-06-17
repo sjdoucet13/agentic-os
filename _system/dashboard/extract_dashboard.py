@@ -53,6 +53,14 @@ META = {"_ops", "_system"}
 SKIP_TOP = {"_graphs", "_recon", ".git", ".obsidian", "_system"}  # _system handled explicitly below
 # Domain -> code-graph dir under _graphs/ (config, NOT project data).
 GRAPH_DIR = {"mad": "mad-custom-tx", "zus": "zus-legacy", "fugro": "PM_Auto"}
+# Domain -> repo + authoritative backlog file (these live OUTSIDE the vault, in the
+# WSL-native repos — the dashboard links out to them read-only, never renders them).
+REPO = {"mad": "/home/sdoucet/projects/mad-custom-tx-master",
+        "zus": "/home/sdoucet/projects/zus-legacy/nextjs-boilerplate",
+        "fugro": "/home/sdoucet/projects/PM_Auto"}
+BACKLOG_REL = {"mad": "BACKLOG.md", "zus": "recon/PINNED_BACKLOG.md", "fugro": "BACKLOG.md"}
+# WSL repos open from Windows over the wsl.localhost UNC; build a file: URL for the link.
+WSL_FILE_PREFIX = "file://wsl.localhost/Ubuntu"
 
 NOW = datetime.datetime.now()
 SKELETON = re.compile(r"_\(none.*?\)_|_\(empty.*?\)_", re.I)
@@ -99,7 +107,7 @@ def iso(ts: float):
 def clean(s: str) -> str:
     s = re.sub(r"\[\[[^\]|]*\|([^\]]*)\]\]", r"\1", s)   # [[path|alias]] -> alias
     s = re.sub(r"\[\[([^\]]*)\]\]", r"\1", s)
-    s = re.sub(r"[*`_]", "", s)
+    s = re.sub(r"[*`]", "", s)   # strip md emphasis/code ticks; keep underscores (code identifiers)
     return s.strip()
 
 
@@ -122,7 +130,7 @@ def parse_now(path: pathlib.Path) -> dict:
     if not path.is_file():
         return res
     text = path.read_text(encoding="utf-8", errors="ignore")
-    if re.search(r"\bPARKED\b", text):
+    if re.search(r"\bparked\b", text, re.I):
         res["parked"] = True
     secs = md_sections(text)
 
@@ -265,6 +273,12 @@ def scan_domain(d: dict) -> dict:
                  "html": ghtml.relative_to(VAULT).as_posix(),
                  "exists": ghtml.is_file()}
 
+    backlog = None
+    if did in REPO and did in BACKLOG_REL:
+        bpath = pathlib.Path(REPO[did]) / BACKLOG_REL[did]
+        backlog = {"path": str(bpath), "rel": BACKLOG_REL[did],
+                   "exists": bpath.is_file(), "fileUrl": WSL_FILE_PREFIX + str(bpath)}
+
     return {
         "domain": did,
         "kind": kind,
@@ -278,6 +292,7 @@ def scan_domain(d: dict) -> dict:
         "freshness": freshness(age_days(newest)),
         "rhythm": rhythm(ddir),
         "graph": graph,
+        "backlog": backlog,
         "subAreas": subs,
     }
 
@@ -509,10 +524,12 @@ function showDetail(id){
   const d = DATA.domains.find(x=>x.domain===id);
   const gbtn = d.graph && d.graph.exists
     ? `<span class="glink" onclick="openGraph('${esc(d.graph.html)}')">&#9638; open ${esc(d.graph.name)} code-graph</span>` : '';
+  const bbtn = d.backlog && d.backlog.exists
+    ? `<span class="glink" onclick="window.open('${esc(d.backlog.fileUrl)}','_blank')" title="${esc(d.backlog.path)}">&#128203; backlog &#8599;</span>` : '';
   document.getElementById('detailbody').innerHTML =
     `<div class="d2head"><div class="dname">${esc(d.domain)}</div>
        <span class="health ${d.healthStatus==='green'?'healthy':d.healthStatus==='amber'?'attention':'critical'}">${esc(d.health)}</span>
-       ${gbtn}</div>
+       ${gbtn}${bbtn}</div>
      <div class="dtag" style="margin-bottom:16px">${esc(d.title)}${d.router?(' · '+esc(d.router)):''}</div>
      <div class="grid">${d.subAreas.map(subAreaCard).join('')}</div>`;
   document.getElementById('overview').style.display='none';
