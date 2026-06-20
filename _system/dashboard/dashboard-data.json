@@ -1,7 +1,7 @@
 {
   "schemaVersion": 4,
   "version": "v4-missioncontrol",
-  "generatedAt": "2026-06-20T21:40:25",
+  "generatedAt": "2026-06-20T21:51:51",
   "vaultPath": "/home/sdoucet/projects/agentic-os",
   "obsidianVaultPath": "\\\\wsl.localhost\\Ubuntu\\home\\sdoucet\\projects\\agentic-os",
   "freshnessThresholds": {
@@ -14,10 +14,10 @@
     "agentState": "IDLE",
     "running": 0,
     "sweptSource": "git",
-    "lastSweptIso": "2026-06-20T21:27:02",
-    "lastSweptHours": 0.2,
+    "lastSweptIso": "2026-06-20T21:43:14",
+    "lastSweptHours": 0.1,
     "activeProjects": 2,
-    "codeGraphs": 0,
+    "codeGraphs": 2,
     "flags": 2,
     "parked": 2,
     "openItems": 19
@@ -79,13 +79,13 @@
         "domain": "mad",
         "label": "MAD",
         "src": "../../_graphs/mad-custom-tx/graphify-out/graph.html",
-        "exists": false
+        "exists": true
       },
       {
         "domain": "zus",
         "label": "ZUS",
         "src": "../../_graphs/zus-legacy/graphify-out/graph.html",
-        "exists": false
+        "exists": true
       },
       {
         "domain": "fugro",
@@ -468,7 +468,7 @@
       "graph": {
         "name": "mad-custom-tx",
         "html": "_graphs/mad-custom-tx/graphify-out/graph.html",
-        "exists": false
+        "exists": true
       },
       "backlog": {
         "path": "/home/sdoucet/projects/mad-custom-tx/BACKLOG.md",
@@ -851,7 +851,7 @@
       "graph": {
         "name": "zus-legacy",
         "html": "_graphs/zus-legacy/graphify-out/graph.html",
-        "exists": false
+        "exists": true
       },
       "backlog": {
         "path": "/home/sdoucet/projects/zus-legacy/recon/PINNED_BACKLOG.md",
@@ -1038,7 +1038,7 @@
           "status": "green"
         }
       ],
-      "lastUpdated": "2026-06-20T21:39:12",
+      "lastUpdated": "2026-06-20T21:40:25",
       "freshness": "green",
       "rhythm": [
         0,
@@ -1107,7 +1107,7 @@
             "blocked": 0,
             "parked": 0
           },
-          "lastUpdated": "2026-06-20T21:39:12",
+          "lastUpdated": "2026-06-20T21:40:25",
           "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 0,
