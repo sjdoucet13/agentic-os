@@ -19,3 +19,6 @@
 .DS_Store
 Thumbs.db
 *~
+
+# Transient recon artifacts — NEVER commit (contains secret-location maps)
+/_recon/
