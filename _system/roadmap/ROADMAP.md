@@ -22,6 +22,6 @@ them; this file is the placeholder so they aren't lost.
 ## Ground-truth population (separate pass)
 - Recon sweep of the two live repos to populate **real** domain knowledge (not
   placeholders), each repo's findings kept strictly in its own domain:
-  - `sjdoucet13/mad-custom-tx`  → `mad/` (local: `~/projects/mad-custom-tx-master`)
+  - `sjdoucet13/mad-custom-tx`  → `mad/` (local: `~/projects/mad-custom-tx`)
   - `sjdoucet13/nextjs-boilerplate` = zus-legacy → `zus/` (local: `~/projects/zus-legacy`)
 - Report findings up to planning-Claude before locking them in.

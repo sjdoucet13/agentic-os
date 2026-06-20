@@ -23,8 +23,8 @@ VAULT = pathlib.Path(__file__).resolve().parents[3]   # _ops/skills/domain-brief
 
 # domain -> its CODE repo (read-only). Same kind of fixed config as capture's allow-list.
 REPO = {
-    "mad":      "/home/sdoucet/projects/mad-custom-tx-master",
-    "zus":      "/home/sdoucet/projects/zus-legacy/nextjs-boilerplate",
+    "mad":      "/home/sdoucet/projects/mad-custom-tx",
+    "zus":      "/home/sdoucet/projects/zus-legacy",
     "fugro":    "/home/sdoucet/projects/PM_Auto",
     "personal": None,
 }

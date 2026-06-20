@@ -61,8 +61,8 @@ the end.** This is pre-authorized standing behavior, not a per-time ask.
 - **NEVER commit code, and NEVER commit to `main`.** Vault state only; working branch only.
 
 ### Git topology (confirmed — do not assume)
-The **vault** is its own repo (`/mnt/c/Users/sdouc/projects/agentic-os`). mad's **code** is
-a **separate** repo (`/home/sdoucet/projects/mad-custom-tx-master`, branch `working`).
+The **vault** is its own repo (`/home/sdoucet/projects/agentic-os`). mad's **code** is
+a **separate** repo (`/home/sdoucet/projects/mad-custom-tx`, branch `working`).
 Vault-state commits land in the **vault** repo on a **working branch** (currently
 `feat/mad-operating-loop`) — never `main`, never the code repo. Because they are different
 repos, a vault commit physically can't grab mad code; the explicit-path rule additionally

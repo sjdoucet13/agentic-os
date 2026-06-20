@@ -31,8 +31,8 @@
 - **GateGuard stays ON.** Expect the fact-forcing gate to fire; comply per-turn, never
   disable it.
 - **Git topology (confirmed, don't assume):** the **vault** is its own repo
-  (`/mnt/c/Users/sdouc/projects/agentic-os`); each domain's **code** repo is separate
-  (mad → `/home/sdoucet/projects/mad-custom-tx-master`, branch `working`). **Vault-state
+  (`/home/sdoucet/projects/agentic-os`); each domain's **code** repo is separate
+  (mad → `/home/sdoucet/projects/mad-custom-tx`, branch `working`). **Vault-state
   commits land in the vault repo on a working branch — never `main`.**
 
 ---

@@ -5,7 +5,7 @@
 
 Mad LLC dual-storefront e-commerce — **one Next.js app serving two hostnames**:
 `madarmorytx.com` (Armory, tactical dark theme `#09090b`) + `madcustomstx.com` (Customs, neon theme
-`#08080f`). Repo `~/projects/mad-custom-tx-master` (branch `working`). Pre-launch.
+`#08080f`). Repo `~/projects/mad-custom-tx` (branch `working`). Pre-launch.
 
 ## Stack (ground truth)
 - **Next.js 16.2.4** — uses the Next 16 `proxy.ts` middleware convention (root file exports `proxy`).

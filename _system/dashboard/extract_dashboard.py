@@ -52,8 +52,8 @@ MOMENTUM_DAYS = 21
 META = {"_ops", "_system"}
 SKIP_TOP = {"_graphs", "_recon", ".git", ".obsidian", "_system"}
 GRAPH_DIR = {"mad": "mad-custom-tx", "zus": "zus-legacy", "fugro": "PM_Auto"}
-REPO = {"mad": "/home/sdoucet/projects/mad-custom-tx-master",
-        "zus": "/home/sdoucet/projects/zus-legacy/nextjs-boilerplate",
+REPO = {"mad": "/home/sdoucet/projects/mad-custom-tx",
+        "zus": "/home/sdoucet/projects/zus-legacy",
         "fugro": "/home/sdoucet/projects/PM_Auto"}
 BACKLOG_REL = {"mad": "BACKLOG.md", "zus": "recon/PINNED_BACKLOG.md", "fugro": "BACKLOG.md"}
 WSL_FILE_PREFIX = "file://wsl.localhost/Ubuntu"

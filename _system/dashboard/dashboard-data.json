@@ -1,8 +1,8 @@
 {
   "schemaVersion": 4,
   "version": "v4-missioncontrol",
-  "generatedAt": "2026-06-17T10:24:13",
-  "vaultPath": "/mnt/c/Users/sdouc/projects/agentic-os",
+  "generatedAt": "2026-06-20T21:40:25",
+  "vaultPath": "/home/sdoucet/projects/agentic-os",
   "obsidianVaultPath": "\\\\wsl.localhost\\Ubuntu\\home\\sdoucet\\projects\\agentic-os",
   "freshnessThresholds": {
     "greenDays": 3,
@@ -14,10 +14,10 @@
     "agentState": "IDLE",
     "running": 0,
     "sweptSource": "git",
-    "lastSweptIso": "2026-06-17T09:38:51",
-    "lastSweptHours": 0.8,
-    "activeProjects": 3,
-    "codeGraphs": 3,
+    "lastSweptIso": "2026-06-20T21:27:02",
+    "lastSweptHours": 0.2,
+    "activeProjects": 2,
+    "codeGraphs": 0,
     "flags": 2,
     "parked": 2,
     "openItems": 19
@@ -79,19 +79,19 @@
         "domain": "mad",
         "label": "MAD",
         "src": "../../_graphs/mad-custom-tx/graphify-out/graph.html",
-        "exists": true
+        "exists": false
       },
       {
         "domain": "zus",
         "label": "ZUS",
         "src": "../../_graphs/zus-legacy/graphify-out/graph.html",
-        "exists": true
+        "exists": false
       },
       {
         "domain": "fugro",
         "label": "FUGRO",
         "src": "../../_graphs/PM_Auto/graphify-out/graph.html",
-        "exists": true
+        "exists": false
       }
     ],
     "default": "mad"
@@ -122,7 +122,7 @@
           "status": "green"
         }
       ],
-      "lastUpdated": "2026-06-16T13:34:16",
+      "lastUpdated": "2026-06-20T21:39:08",
       "freshness": "green",
       "rhythm": [
         0,
@@ -191,8 +191,8 @@
             "blocked": 0,
             "parked": 0
           },
-          "lastUpdated": "2026-06-16T13:34:16",
-          "ageDays": 0.9,
+          "lastUpdated": "2026-06-20T21:39:08",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 0,
           "knowledgePopulated": 0,
@@ -231,7 +231,7 @@
           "status": "green"
         }
       ],
-      "lastUpdated": "2026-06-17T07:33:30",
+      "lastUpdated": "2026-06-20T21:28:45",
       "freshness": "green",
       "rhythm": [
         0,
@@ -251,14 +251,14 @@
       ],
       "momentum": {
         "bars": [
-          11,
           0,
           0,
           0,
-          4,
-          22,
-          6,
-          23,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           0,
@@ -273,58 +273,27 @@
           0,
           0
         ],
-        "total": 66,
+        "total": 0,
         "state": "idle",
-        "word": "cold",
+        "word": "idle",
         "days": 21,
-        "source": "git"
+        "source": "none"
       },
-      "recentCommits": [
-        {
-          "hash": "22f2866",
-          "date": "2026-06-04",
-          "subject": "both_ways_gate: widen grand-total scan + soft-skip when not found"
-        },
-        {
-          "hash": "08a284b",
-          "date": "2026-06-04",
-          "subject": "Add both_ways_gate.py \u2014 proves Excel cached values tie to Python compute"
-        },
-        {
-          "hash": "85547f9",
-          "date": "2026-06-04",
-          "subject": "Cost tracker: section-level span fill (one button per section header)"
-        },
-        {
-          "hash": "35c9487",
-          "date": "2026-06-04",
-          "subject": "Cost tracker: move Span button into the Name cell (always visible)"
-        },
-        {
-          "hash": "eb2e4da",
-          "date": "2026-06-04",
-          "subject": "Cost tracker: line span fill (Approach A \u2014 visible picking mode)"
-        },
-        {
-          "hash": "42d7685",
-          "date": "2026-06-04",
-          "subject": "Cost tracker: column fill \u2014 click a day header to set the whole column"
-        }
-      ],
+      "recentCommits": [],
       "repo": {
         "path": "/home/sdoucet/projects/PM_Auto",
         "name": "PM_Auto",
-        "exists": true
+        "exists": false
       },
       "graph": {
         "name": "PM_Auto",
         "html": "_graphs/PM_Auto/graphify-out/graph.html",
-        "exists": true
+        "exists": false
       },
       "backlog": {
         "path": "/home/sdoucet/projects/PM_Auto/BACKLOG.md",
         "rel": "BACKLOG.md",
-        "exists": true,
+        "exists": false,
         "fileUrl": "file://wsl.localhost/Ubuntu/home/sdoucet/projects/PM_Auto/BACKLOG.md"
       },
       "subAreas": [
@@ -363,8 +332,8 @@
             "blocked": 0,
             "parked": 0
           },
-          "lastUpdated": "2026-06-17T07:33:30",
-          "ageDays": 0.1,
+          "lastUpdated": "2026-06-20T21:28:45",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -411,7 +380,7 @@
           "status": "green"
         }
       ],
-      "lastUpdated": "2026-06-17T07:34:31",
+      "lastUpdated": "2026-06-20T21:39:12",
       "freshness": "green",
       "rhythm": [
         0,
@@ -431,9 +400,6 @@
       ],
       "momentum": {
         "bars": [
-          18,
-          0,
-          8,
           16,
           6,
           0,
@@ -451,61 +417,64 @@
           0,
           0,
           0,
-          0
+          0,
+          0,
+          0,
+          2
         ],
-        "total": 67,
-        "state": "cooling",
-        "word": "cooling",
+        "total": 43,
+        "state": "hot",
+        "word": "hot",
         "days": 21,
         "source": "git"
       },
       "recentCommits": [
         {
-          "hash": "f1615184",
+          "hash": "81283e5",
+          "date": "2026-06-20",
+          "subject": "Remove Windows Zone.Identifier cruft"
+        },
+        {
+          "hash": "1531bc9",
+          "date": "2026-06-20",
+          "subject": "Migration checkpoint: CC config, skills, mcp settings"
+        },
+        {
+          "hash": "f161518",
           "date": "2026-06-11",
           "subject": "Search engine shutoff pre-launch \u2014 robots.ts Disallow: / for all agents, sitemap.ts returns empty, l"
         },
         {
-          "hash": "d07123fa",
+          "hash": "d07123f",
           "date": "2026-06-11",
           "subject": "Invert foundry gate to deny-by-default in proxy.ts \u2014 no cookie => holding page (200 rewrite, no Loca"
         },
         {
-          "hash": "f586bc1c",
+          "hash": "f586bc1",
           "date": "2026-06-09",
           "subject": "Harden /api/uploads/customs/ per RECON \u00a711 \u2014 per-IP rate limit 20/10min on presigned+composite+score"
         },
         {
-          "hash": "63d26aec",
+          "hash": "63d26ae",
           "date": "2026-06-09",
           "subject": "RECON.md \u00a711: presigned-upload risk analysis \u2014 three /api/uploads/customs/ routes are unauthenticate"
-        },
-        {
-          "hash": "8ae4d9b7",
-          "date": "2026-06-09",
-          "subject": "Remove legacy checkout path \u2014 delete app/actions/checkout.ts (processCheckout), superseded by /api/p"
-        },
-        {
-          "hash": "76fbff20",
-          "date": "2026-06-09",
-          "subject": "Strip PII + payment data from server logs \u2014 drop customer email from signin/password-reset/update-pa"
         }
       ],
       "repo": {
-        "path": "/home/sdoucet/projects/mad-custom-tx-master",
-        "name": "mad-custom-tx-master",
+        "path": "/home/sdoucet/projects/mad-custom-tx",
+        "name": "mad-custom-tx",
         "exists": true
       },
       "graph": {
         "name": "mad-custom-tx",
         "html": "_graphs/mad-custom-tx/graphify-out/graph.html",
-        "exists": true
+        "exists": false
       },
       "backlog": {
-        "path": "/home/sdoucet/projects/mad-custom-tx-master/BACKLOG.md",
+        "path": "/home/sdoucet/projects/mad-custom-tx/BACKLOG.md",
         "rel": "BACKLOG.md",
         "exists": true,
-        "fileUrl": "file://wsl.localhost/Ubuntu/home/sdoucet/projects/mad-custom-tx-master/BACKLOG.md"
+        "fileUrl": "file://wsl.localhost/Ubuntu/home/sdoucet/projects/mad-custom-tx/BACKLOG.md"
       },
       "subAreas": [
         {
@@ -545,8 +514,8 @@
             "blocked": 0,
             "parked": 1
           },
-          "lastUpdated": "2026-06-17T07:34:31",
-          "ageDays": 0.1,
+          "lastUpdated": "2026-06-20T21:39:12",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -589,8 +558,8 @@
             "blocked": 0,
             "parked": 0
           },
-          "lastUpdated": "2026-06-17T07:34:19",
-          "ageDays": 0.1,
+          "lastUpdated": "2026-06-20T21:28:45",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -633,8 +602,8 @@
             "blocked": 0,
             "parked": 0
           },
-          "lastUpdated": "2026-06-17T07:34:14",
-          "ageDays": 0.1,
+          "lastUpdated": "2026-06-20T21:28:45",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -673,7 +642,7 @@
           "status": "green"
         }
       ],
-      "lastUpdated": "2026-06-16T13:35:56",
+      "lastUpdated": "2026-06-20T21:28:45",
       "freshness": "green",
       "rhythm": [
         0,
@@ -742,8 +711,8 @@
             "blocked": 0,
             "parked": 0
           },
-          "lastUpdated": "2026-06-16T13:35:56",
-          "ageDays": 0.9,
+          "lastUpdated": "2026-06-20T21:28:45",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 0,
@@ -794,7 +763,7 @@
           "status": "amber"
         }
       ],
-      "lastUpdated": "2026-06-17T07:34:25",
+      "lastUpdated": "2026-06-20T21:39:12",
       "freshness": "green",
       "rhythm": [
         0,
@@ -814,9 +783,6 @@
       ],
       "momentum": {
         "bars": [
-          2,
-          9,
-          12,
           3,
           0,
           0,
@@ -834,15 +800,33 @@
           9,
           5,
           2,
-          0
+          0,
+          0,
+          0,
+          3
         ],
-        "total": 210,
+        "total": 190,
         "state": "hot",
         "word": "hot",
         "days": 21,
         "source": "git"
       },
       "recentCommits": [
+        {
+          "hash": "944eed4",
+          "date": "2026-06-20",
+          "subject": "Rename project to zus-legacy in package.json"
+        },
+        {
+          "hash": "f45582b",
+          "date": "2026-06-20",
+          "subject": "Remove Windows Zone.Identifier cruft"
+        },
+        {
+          "hash": "d752639",
+          "date": "2026-06-20",
+          "subject": "Migration checkpoint: recon/backup scripts, CC config, docs"
+        },
         {
           "hash": "49a47d0",
           "date": "2026-06-16",
@@ -857,38 +841,23 @@
           "hash": "6c5669c",
           "date": "2026-06-15",
           "subject": "pipeline(2a): migrate processScreenshotWithAI write onto shared core + fix 3 bugs on-migrate"
-        },
-        {
-          "hash": "4ce0015",
-          "date": "2026-06-15",
-          "subject": "pipeline(1d): apply the four ruled behavior fixes to the shared core + callers"
-        },
-        {
-          "hash": "e632415",
-          "date": "2026-06-15",
-          "subject": "pipeline(1c): migrate batches.ts commitAiBatch onto shared resolveNorm/buildScoreUpsertOp (no behavi"
-        },
-        {
-          "hash": "7d41b4a",
-          "date": "2026-06-15",
-          "subject": "pipeline(1b): migrate scores.ts write paths onto shared writeScore/resolveNorm (no behavior change)"
         }
       ],
       "repo": {
-        "path": "/home/sdoucet/projects/zus-legacy/nextjs-boilerplate",
-        "name": "nextjs-boilerplate",
+        "path": "/home/sdoucet/projects/zus-legacy",
+        "name": "zus-legacy",
         "exists": true
       },
       "graph": {
         "name": "zus-legacy",
         "html": "_graphs/zus-legacy/graphify-out/graph.html",
-        "exists": true
+        "exists": false
       },
       "backlog": {
-        "path": "/home/sdoucet/projects/zus-legacy/nextjs-boilerplate/recon/PINNED_BACKLOG.md",
+        "path": "/home/sdoucet/projects/zus-legacy/recon/PINNED_BACKLOG.md",
         "rel": "recon/PINNED_BACKLOG.md",
         "exists": true,
-        "fileUrl": "file://wsl.localhost/Ubuntu/home/sdoucet/projects/zus-legacy/nextjs-boilerplate/recon/PINNED_BACKLOG.md"
+        "fileUrl": "file://wsl.localhost/Ubuntu/home/sdoucet/projects/zus-legacy/recon/PINNED_BACKLOG.md"
       },
       "subAreas": [
         {
@@ -907,8 +876,8 @@
             "blocked": 0,
             "parked": 0
           },
-          "lastUpdated": "2026-06-16T19:18:57",
-          "ageDays": 0.6,
+          "lastUpdated": "2026-06-20T21:28:45",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -941,8 +910,8 @@
             "blocked": 0,
             "parked": 0
           },
-          "lastUpdated": "2026-06-16T19:18:29",
-          "ageDays": 0.6,
+          "lastUpdated": "2026-06-20T21:28:45",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -979,8 +948,8 @@
             "blocked": 0,
             "parked": 0
           },
-          "lastUpdated": "2026-06-16T19:16:34",
-          "ageDays": 0.6,
+          "lastUpdated": "2026-06-20T21:28:45",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -1029,8 +998,8 @@
             "blocked": 0,
             "parked": 1
           },
-          "lastUpdated": "2026-06-17T07:34:25",
-          "ageDays": 0.1,
+          "lastUpdated": "2026-06-20T21:39:12",
+          "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 5,
           "knowledgePopulated": 5,
@@ -1069,7 +1038,7 @@
           "status": "green"
         }
       ],
-      "lastUpdated": "2026-06-17T10:23:55",
+      "lastUpdated": "2026-06-20T21:39:12",
       "freshness": "green",
       "rhythm": [
         0,
@@ -1138,7 +1107,7 @@
             "blocked": 0,
             "parked": 0
           },
-          "lastUpdated": "2026-06-17T10:23:55",
+          "lastUpdated": "2026-06-20T21:39:12",
           "ageDays": 0.0,
           "freshness": "green",
           "knowledgeFiles": 0,

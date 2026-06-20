@@ -4,7 +4,7 @@
 > fit together. Walled to this domain. Reconcile raw captures into here (RECONCILE).
 
 The Next.js **clan-intelligence platform** for ZUS. The repo name "nextjs-boilerplate" is a misnomer —
-it's a full platform. Repo `~/projects/zus-legacy/nextjs-boilerplate` (branch `screenshot-pipeline`).
+it's a full platform. Repo `~/projects/zus-legacy` (branch `screenshot-pipeline`).
 
 ## Stack
 Next.js **14.2.15** · **MongoDB 6.5.0** (prod `ZUS_Clan_DB`) · **Vercel** · JWT auth (`jose`) with a
